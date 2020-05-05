@@ -1,0 +1,9 @@
+// Texto de destaque
+// exemplo de variável que pode ser estendida diretamente no componente via Sass
+
+%highlight-text {
+  font-size: 1em;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
