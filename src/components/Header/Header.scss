@@ -1,0 +1,15 @@
+@import 'src/base-styles/dependencies';
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+
+  background: $bg-color-header;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
+}
+
+.teste {
+  color: red($color: #000000);
+}
