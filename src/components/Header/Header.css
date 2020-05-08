@@ -12,3 +12,7 @@
 
 .teste {
   color: 0; }
+
+@media (min-width: 768px) {
+  .header {
+    padding: 0 36px; } }

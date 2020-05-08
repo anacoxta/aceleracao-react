@@ -18,3 +18,9 @@
 .teste {
   color: red($color: #000000);
 }
+
+@media (min-width: $md) {
+  .header {
+    padding: 0 36px;
+  }
+}
