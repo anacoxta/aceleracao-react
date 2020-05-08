@@ -1,10 +1,11 @@
 import React from 'react';
+import './CartIcon.scss';
 
 const CartIcon = () => {
   return (
     <>
       <span>
-        <i class="fas fa-shopping-cart"></i>
+        <i className="fas fa-shopping-cart"></i>
       </span>
     </>
   );

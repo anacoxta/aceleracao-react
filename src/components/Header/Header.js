@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <header className='header'>
       <Logo />
-      <CartIcon />
+      <div className='header__btnContainer'>
+        <CartIcon />
+      </div>
     </header>
   );
 }
