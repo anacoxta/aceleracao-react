@@ -1,7 +1,7 @@
 import React from 'react';
-import './CartIcon.scss';
+import './CartBtn.scss';
 
-const CartIcon = () => {
+const CartBtn = () => {
   return (
     <button data-count='5'>
       <i className='fas fa-shopping-cart'></i>
@@ -9,4 +9,4 @@ const CartIcon = () => {
   );
 }
 
-export default CartIcon;
+export default CartBtn;

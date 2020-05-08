@@ -1,14 +1,14 @@
 import React from 'react';
 import './Header.css';
 import Logo from '../Logo/Logo'
-import CartIcon from '../Cart/CartIcon';
+import CartBtn from '../Cart/CartBtn';
 
 const Header = () => {
   return (
     <header className='header'>
       <Logo />
       <div className='header__btnContainer'>
-        <CartIcon />
+        <CartBtn />
       </div>
     </header>
   );
