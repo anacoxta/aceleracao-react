@@ -3,14 +3,14 @@
 .header {
   position: absolute;
   width: 100%;
-  height: 14vh;
+  height: 70px;
 
   align-items: center;
   background: $bg-color-header;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding: 5vw;
+  padding: 0 18px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
 }
