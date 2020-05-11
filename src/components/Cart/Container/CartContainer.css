@@ -61,3 +61,8 @@
       width: 50%;
       /* Color */
       background-color: white; } }
+
+@media (min-width: 992px) {
+  .cart__container .cart__container--active {
+    /* Display & Box Model */
+    width: 40%; } }

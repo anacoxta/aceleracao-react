@@ -86,3 +86,12 @@
     }
   }
 }
+
+@media (min-width: $lg) {
+  .cart__container {
+    .cart__container--active {
+      /* Display & Box Model */
+      width: 40%;
+    }
+  }
+}
