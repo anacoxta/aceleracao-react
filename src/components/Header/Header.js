@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import Logo from '../Logo/Logo'
 import CartBtn from '../Cart/Button/CartBtn';
-import CartDesktop from '../Cart/Desktop/CartDesktop'
+import CartDesktop from '../Cart/Container/CartContainer'
 
 const Header = () => {
   const [ activeCart, setActiveCart ] = useState(false)
