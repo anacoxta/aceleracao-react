@@ -3,9 +3,11 @@ import './CartBtn.scss';
 
 const CartBtn = () => {
   return (
-    <button data-count='5'>
-      <i className='fas fa-shopping-cart'></i>
-    </button>
+    <>
+      <button data-count='5'>
+        <i className='fas fa-shopping-cart'></i>
+      </button>
+    </>
   );
 }
 

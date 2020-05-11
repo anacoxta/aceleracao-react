@@ -1,0 +1,10 @@
+.cart__container {
+  /* Positioning */
+  position: fixed;
+  right: 0;
+  top: 10vh;
+  /* Display & Box Model */
+  height: 90vh;
+  width: 50%;
+  /* Color */
+  background-color: white; }
