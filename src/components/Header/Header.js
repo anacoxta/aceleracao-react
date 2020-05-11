@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import Logo from '../Logo/Logo'
 import CartBtn from '../Cart/Button/CartBtn';
-import CartDesktop from '../Cart/Container/CartContainer'
+import CartContainer from '../Cart/Container/CartContainer'
 
 const Header = () => {
   const [ activeCart, setActiveCart ] = useState(false)
@@ -13,7 +13,7 @@ const Header = () => {
       <div className='header__btnContainer'>
         <CartBtn activeCart={activeCart} setActiveCart={setActiveCart} />
       </div>
-      <CartDesktop active={activeCart} />
+      <CartContainer activeCart={activeCart} setActiveCart={setActiveCart} />
     </header>
   );
 }

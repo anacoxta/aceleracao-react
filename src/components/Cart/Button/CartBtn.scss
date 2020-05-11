@@ -1,11 +1,12 @@
 @import 'src/base-styles/dependencies';
 
-button {
+.cart__button {
   /* Positioning */
   position: relative;
 
   /* Display & Box Model */
   border: none;
+  margin-top: 2vh;
 
   /* Color */
   background: transparent;
@@ -16,31 +17,31 @@ button {
 
   /* Other */
   cursor: pointer;
-}
 
-button:before {
-  /* Positioning */
-  left: auto;
-  position: absolute;
-  right: -7px;
-  top: -7px;
+  &:before {
+    /* Positioning */
+    left: auto;
+    position: absolute;
+    right: -7px;
+    top: -7px;
 
-  /* Display & Box Model */
-  border: 1px solid var(--secondary-light);
-  border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  display: block;
-  height: 18px;
-  width: 18px;
+    /* Display & Box Model */
+    border: 1px solid var(--secondary-light);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    display: block;
+    height: 18px;
+    width: 18px;
 
-  /* Color */
-  background: var(--secondary-light);
-  color: #FFF;
+    /* Color */
+    background: var(--secondary-light);
+    color: #FFF;
 
-  /* Text */
-  font-size: 0.7em;
-  text-align: center;
+    /* Text */
+    font-size: 0.7em;
+    text-align: center;
 
-  /* Other */
-  content: attr(data-count);
+    /* Other */
+    content: attr(data-count);
+  }
 }
