@@ -1,3 +1,5 @@
+@import 'src/base-styles/dependencies';
+
 .cart__container {
   /* Positioning */
   position: fixed;
@@ -6,23 +8,28 @@
 
   /* Display & Box Model */
   height: 90vh;
+  width: 0;
 
   /* Color */
   background-color: white;
+}
 
-  -webkit-transition: width 0.5s linear;
+@media (min-width: $md) {
+  .cart__container {
+    -webkit-transition: width 0.5s linear;
         -moz-transition: width 0.5s linear;
          -ms-transition: width 0.5s linear;
           -o-transition: width 0.5s linear;
              transition: width 0.5s linear;
 
-  &.cart__container--active-true {
-    /* Display & Box Model */
-    width: 50%;
-  }
+    &.cart__container--active-true {
+      /* Display & Box Model */
+      width: 50%;
+    }
 
-  &.cart__container--active-false {
-    /* Display & Box Model */
-    width: 0;
+    &.cart__container--active-false {
+      /* Display & Box Model */
+      width: 0;
+    }
   }
 }
