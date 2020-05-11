@@ -1,9 +1,10 @@
 import React from 'react';
 import './CartDesktop.scss';
 
-const CartDesktop = () => {
+const CartDesktop = ({ active }) => {
+  console.log(active)
   return (
-    <div className='cart__container'>
+    <div className={`cart__container cart__container--active-${active}`}>
       Carrinho
     </div>
   );

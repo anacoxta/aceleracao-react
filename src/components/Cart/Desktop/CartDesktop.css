@@ -5,6 +5,16 @@
   top: 10vh;
   /* Display & Box Model */
   height: 90vh;
-  width: 50%;
   /* Color */
-  background-color: white; }
+  background-color: white;
+  -webkit-transition: width 0.5s linear;
+  -moz-transition: width 0.5s linear;
+  -ms-transition: width 0.5s linear;
+  -o-transition: width 0.5s linear;
+  transition: width 0.5s linear; }
+  .cart__container.cart__container--active-true {
+    /* Display & Box Model */
+    width: 50%; }
+  .cart__container.cart__container--active-false {
+    /* Display & Box Model */
+    width: 0; }
