@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss';
 import Logo from '../../components/Logo/Logo';
 
 const Home = () => {
