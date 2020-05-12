@@ -13,9 +13,10 @@
   justify-content: space-between;
   padding: 0 18px; }
 
-.teste {
-  /* Color */
-  color: 0; }
+.header__btnContainer {
+  /* Display & Box Model */
+  align-items: center;
+  display: inline-flex; }
 
 @media (min-width: 768px) {
   .header {

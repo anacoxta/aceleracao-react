@@ -1,0 +1,26 @@
+.inputSearch {
+  /* Positioning */
+  margin-right: 2vh;
+  /* Display & Box Model */
+  align-items: center;
+  display: flex; }
+  .inputSearch input {
+    /* Positioning */
+    height: 26px;
+    /* Display & Box Model */
+    border: none;
+    /* Color */
+    background-color: #EEEEEE; }
+  .inputSearch button {
+    /* Positioning */
+    height: 28px;
+    /* Display & Box Model */
+    border: none;
+    /* Color */
+    background-color: #EEEEEE;
+    color: #717171;
+    /* Other */
+    cursor: pointer; }
+    .inputSearch button i {
+      /* Text */
+      font-size: 20px; }
