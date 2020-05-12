@@ -1,4 +1,6 @@
-.inputSearch {
+@import 'src/base-styles/dependencies';
+
+#inputSearch {
   /* Positioning */
   margin-right: 2vh;
 
@@ -8,13 +10,18 @@
 
   input {
     /* Positioning */
-    height: 26px;
+    height: 28px;
 
     /* Display & Box Model */
     border: none;
+    padding: 0 5px;
 
     /* Color */
     background-color: #EEEEEE;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   button {
@@ -31,9 +38,74 @@
     /* Other */
     cursor: pointer;
 
-    i {
+    .fa-search {
       /* Text */
       font-size: 20px;
+
+      &:focus {
+        outline: none;
+      }
     }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.mobileSearchContainer {
+  /* Positioning */
+  left: 0;
+  position: absolute;
+  top: 10vh;
+
+  /* Display & Box Model */
+  box-sizing: border-box;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  padding: 0 10px;
+  width: 100%;
+
+  /* Color */
+  background-color: #717171;
+
+
+  #inputSearch {
+    /* Display & Box Model */
+    margin: 0;
+
+    input {
+      width: 70vw;
+    }
+  }
+}
+
+.mobileSearchBtn {
+  /* Positioning */
+  position: relative;
+
+  /* Display & Box Model */
+  border: none;
+
+  /* Color */
+  background: transparent;
+  color: white;
+
+  /* Text */
+  font-size: 1.5em;
+}
+
+@media (max-width: $md) {
+  .desktopSearchContainer, .desktopSearchContainer__inputSearch {
+    /* Display & Box Model */
+    display: none;
+  }
+}
+
+@media (min-width: $md) {
+  .mobileSearchBtn, .mobileSearchContainer {
+    /* Display & Box Model */
+    display: none;
   }
 }

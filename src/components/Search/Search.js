@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Search.scss';
 
-const Search = ({ activeCart, setActiveCart }) => {
+const Search = () => {
+  const [ mobileSearchContainer, setMobileSearchContainer ] = useState(false)
+
   return (
-    // <div>
-      <label for='inputSearch' className='inputSearch'>
-        <input type='text' id='inputSearch'/>
-        <button className=''>
-          <i className='fas fa-search'></i>
-        </button>
-      </label>
-    // </div>
+    <div>
+      <button className='mobileSearchBtn' onClick={() => setMobileSearchContainer(!mobileSearchContainer)}>
+        <i className='fas fa-search'></i>
+      </button>
+      <div className='desktopSearchContainer'>
+        <label id='inputSearch' className='desktopSearchContainer__inputSearch'>
+          <input type='text'/>
+          <button className=''>
+            <i className='fas fa-search'></i>
+          </button>
+        </label>
+      </div>
+
+      { mobileSearchContainer &&
+        <div className='mobileSearchContainer'>
+          <label id='inputSearch' className='mobileSearchContainer__inputSearch'>
+            <input type='text'/>
+            <button className=''>
+              <i className='fas fa-search'></i>
+            </button>
+          </label>
+        </div>
+      }
+    </div>
   );
 }
 
