@@ -1,34 +1,17 @@
-import React, { useState } from 'react';
-import './Search.scss';
+import React, { useState } from 'react'
+import Input from './Input/Input'
+import './Search.scss'
 
 const Search = () => {
-  const [ mobileSearchContainer, setMobileSearchContainer ] = useState(false)
+  const [ mobileSearch, setMobileSearch ] = useState(false)
 
   return (
-    <div>
-      <button className='mobileSearchBtn' onClick={() => setMobileSearchContainer(!mobileSearchContainer)}>
+    <>
+      <button className='mobileSearchBtn' onClick={() => setMobileSearch(!mobileSearch)}>
         <i className='fas fa-search'></i>
       </button>
-      <div className='desktopSearchContainer'>
-        <label id='inputSearch' className='desktopSearchContainer__inputSearch'>
-          <input type='text'/>
-          <button className=''>
-            <i className='fas fa-search'></i>
-          </button>
-        </label>
-      </div>
-
-      { mobileSearchContainer &&
-        <div className='mobileSearchContainer'>
-          <label id='inputSearch' className='mobileSearchContainer__inputSearch'>
-            <input type='text'/>
-            <button className=''>
-              <i className='fas fa-search'></i>
-            </button>
-          </label>
-        </div>
-      }
-    </div>
+      { mobileSearch ? <Input device={'mobile'} /> : <Input device={'desktop'} /> }
+    </>
   );
 }
 
