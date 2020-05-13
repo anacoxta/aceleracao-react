@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
+import Logo from '../Logo/Logo'
+import CartBtn from '../Cart/Button/CartBtn';
+import CartContainer from '../Cart/Container/CartContainer'
 
 const Header = () => {
+  const [ activeCart, setActiveCart ] = useState(false)
+
   return (
-    <header className='header'></header>
+    <header className='header'>
+      <Logo />
+      <div className='header__btnContainer'>
+        <CartBtn activeCart={activeCart} setActiveCart={setActiveCart} />
+      </div>
+      <CartContainer activeCart={activeCart} setActiveCart={setActiveCart} />
+    </header>
   );
 }
 

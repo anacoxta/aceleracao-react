@@ -1,0 +1,17 @@
+.Home {
+  /* Positioning */
+  margin-top: 10vh;
+  min-height: 90vh;
+
+  /* Display & Box Model */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  /* Color */
+  background-color: var(--secondary-dark);
+
+  /* Text */
+  text-align: center;
+}

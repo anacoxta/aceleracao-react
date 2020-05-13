@@ -3,7 +3,7 @@ import './Logo.css';
 
 const Logo = () => {
   return (
-    <h1 className="Logo">Fashionista</h1>
+    <span className="Logo">Fashionista</span>
   );
 }
 
