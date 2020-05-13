@@ -7,7 +7,7 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
       <div
         className={activeCart ? 'cart__container--active' : ''}
         role='dialog'
-        aria-labelledby='Carrinho de compras'>
+        aria-label='Carrinho de compras'>
         <button
           className='cart__container__button'
           aria-label='Fechar carrinho de compras'
