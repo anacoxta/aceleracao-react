@@ -41,8 +41,8 @@ const Input = ({ device }) => {
       </label>
       {searchResults.length > 0 && (
         <ul className="productsList">
-          {searchResults.map((item, index) => (
-            <li key={index}>{item.name}</li>
+          {searchResults.map((item) => (
+            <li key={item.code_color}>{item.name}</li>
           ))}
         </ul>
       )}
