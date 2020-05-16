@@ -12,9 +12,13 @@ const Input = ({ device }) => {
   };
 
   useEffect(() => {
-    const results = MOCK.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm)
-    );
+    let results = [];
+
+    if (searchTerm !== "") {
+      results = MOCK.filter((product) =>
+        product.name.toLowerCase().includes(searchTerm)
+      );
+    }
 
     setSearchResults(results);
   }, [searchTerm]);
@@ -35,11 +39,13 @@ const Input = ({ device }) => {
           <i className="fas fa-search"></i>
         </button>
       </label>
-      <ul>
-        {searchResults.map((item, index) => (
-          <li key={index}>{item.name}</li>
-        ))}
-      </ul>
+      {searchResults.length > 0 && (
+        <ul className="productsList">
+          {searchResults.map((item, index) => (
+            <li key={index}>{item.name}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
