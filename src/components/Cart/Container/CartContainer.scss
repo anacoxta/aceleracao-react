@@ -1,8 +1,8 @@
-@import 'src/base-styles/dependencies';
+@import "src/base-styles/dependencies";
 
 .cart__container__button {
   /* Display & Box Model */
-  border: block;
+  border: none;
 
   /* Color */
   background: transparent;
@@ -31,7 +31,7 @@
       visibility: visible;
 
       /* Color */
-      background-color: rgba(0, 0, 0, 0.50);
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     .cart__container--active {
@@ -64,10 +64,10 @@
     width: 0;
 
     -webkit-transition: width 0.5s linear;
-        -moz-transition: width 0.5s linear;
-         -ms-transition: width 0.5s linear;
-          -o-transition: width 0.5s linear;
-             transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
+    transition: width 0.5s linear;
 
     &.cart__container--display {
       /* Display & Box Model */

@@ -1,4 +1,4 @@
-@import 'src/base-styles/dependencies';
+@import "src/base-styles/dependencies";
 
 .cart__button {
   /* Positioning */
@@ -42,5 +42,11 @@
 
     /* Other */
     content: attr(data-count);
+  }
+}
+
+@media (max-width: $md) {
+  .cart__button {
+    margin-top: 4px;
   }
 }
