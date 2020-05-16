@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Image.css'
+import './Image.scss'
 
 const Image = ({ className, src, alt }) => {
   return (
