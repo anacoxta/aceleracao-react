@@ -1,8 +1,15 @@
 // Cores principais
-$white: #FFFFFF;
+$white: #ffffff;
+
+$primary-light: #484848;
+$primary: #212121;
+$primary-dark: #000000;
+
+$secondary-light: #9a67ea;
+$secondary: #673ab7;
+$secondary-dark: #320b86;
 
 // Composições de Background
-
 $bg-color-header: #212121;
 
 // Borda
@@ -11,3 +18,7 @@ $bg-color-header: #212121;
 // Font colors
 // $color-default-info: #B9B9B9;
 // $color-title-aside: #262626;
+
+// Sombras
+$ghost: #eeeeee;
+$shadow: rgba(0, 0, 0, 0.4);

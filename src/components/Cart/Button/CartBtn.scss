@@ -9,10 +9,10 @@
   position: relative;
 
   &:before {
-    background: var(--secondary-light);
-    border: 1px solid var(--secondary-light);
+    background: $secondary-light;
+    border: 1px solid $secondary-light;
     border-radius: 50%;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px $shadow;
     color: $white;
     content: attr(data-count);
     display: block;
