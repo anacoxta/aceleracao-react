@@ -3,34 +3,41 @@
   margin-right: 2vh;
   /* Display & Box Model */
   align-items: center;
-  display: flex; }
-  #inputSearch input {
-    /* Positioning */
-    height: 28px;
-    /* Display & Box Model */
-    border: none;
-    padding: 0 5px;
-    /* Color */
-    background-color: #EEEEEE; }
-    #inputSearch input:focus {
-      outline: none; }
-  #inputSearch button {
-    /* Positioning */
-    height: 28px;
-    /* Display & Box Model */
-    border: none;
-    /* Color */
-    background-color: #EEEEEE;
-    color: #717171;
-    /* Other */
-    cursor: pointer; }
-    #inputSearch button .fa-search {
-      /* Text */
-      font-size: 20px; }
-      #inputSearch button .fa-search:focus {
-        outline: none; }
-    #inputSearch button:focus {
-      outline: none; }
+  display: flex;
+}
+#inputSearch input {
+  /* Positioning */
+  height: 28px;
+  /* Display & Box Model */
+  border: none;
+  padding: 0 5px;
+  /* Color */
+  background-color: #eeeeee;
+}
+#inputSearch input:focus {
+  outline: none;
+}
+#inputSearch button {
+  /* Positioning */
+  height: 28px;
+  /* Display & Box Model */
+  border: none;
+  /* Color */
+  background-color: #eeeeee;
+  color: #717171;
+  /* Other */
+  cursor: pointer;
+}
+#inputSearch button .fa-search {
+  /* Text */
+  font-size: 20px;
+}
+#inputSearch button .fa-search:focus {
+  outline: none;
+}
+#inputSearch button:focus {
+  outline: none;
+}
 
 .mobileSearchContainer {
   /* Positioning */
@@ -45,12 +52,15 @@
   padding: 0 10px;
   width: 100%;
   /* Color */
-  background-color: #717171; }
-  .mobileSearchContainer #inputSearch {
-    /* Display & Box Model */
-    margin: 0; }
-    .mobileSearchContainer #inputSearch input {
-      width: 70vw; }
+  background-color: #717171;
+}
+.mobileSearchContainer #inputSearch {
+  /* Display & Box Model */
+  margin: 0;
+}
+.mobileSearchContainer #inputSearch input {
+  width: 70vw;
+}
 
 .mobileSearchBtn {
   /* Positioning */
@@ -61,4 +71,5 @@
   background: transparent;
   color: white;
   /* Text */
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
