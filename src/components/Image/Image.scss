@@ -12,8 +12,8 @@ figure {
 /* Tamanho da caixa da foto para a página de detalhe do produto */
 .product--detail {
   width: 100%;
-  position: absolute;
-  top: 65px;
+  // position: absolute;
+  // top: 60px;
 }
 
 /* Tamanho da caixa da foto para a página do carrinho */
@@ -24,4 +24,24 @@ figure {
 img {
   max-width: 100%;
   cursor: pointer;
+}
+
+@media (min-width: $md) {
+  .product--navegation {
+    width: 26%;
+  }
+
+  .product--cart {
+    width: 35%;
+  }
+}
+
+@media (min-width: $xl) {
+  .product--navegation {
+    width: 21%;
+  }
+
+  .product--cart {
+    width: 40%;
+  }
 }
