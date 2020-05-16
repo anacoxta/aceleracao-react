@@ -1,0 +1,21 @@
+@import 'src/base-styles/dependencies';
+
+// Tamanho da caixa da foto para a página onde temos diversas fotos de produto
+.product--navegation {
+  width: 160px;
+}
+
+// Tamanho da caixa da foto para a página de detalhe do produto
+.product--detail {
+  width: 375px;
+}
+
+// Tamanho da caixa da foto para a página do carrinho
+.product--cart {
+  width: 134px;
+}
+
+img {
+  max-width: 100%;
+  cursor: pointer;
+}

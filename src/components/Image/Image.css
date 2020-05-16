@@ -1,0 +1,12 @@
+.product--navegation {
+  width: 160px; }
+
+.product--detail {
+  width: 375px; }
+
+.product--cart {
+  width: 134px; }
+
+img {
+  max-width: 100%;
+  cursor: pointer; }
