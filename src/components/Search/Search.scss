@@ -1,15 +1,15 @@
-@import 'src/base-styles/dependencies';
+@import "src/base-styles/dependencies";
 
 @media (max-width: $md) {
-  .desktopSearchContainer, .desktopSearchContainer__inputSearch {
-    /* Display & Box Model */
+  .desktopSearchContainer,
+  .desktopSearchContainer__inputSearch {
     display: none;
   }
 }
 
 @media (min-width: $md) {
-  .mobileSearchBtn, .mobileSearchContainer {
-    /* Display & Box Model */
+  .mobileSearchBtn,
+  .mobileSearchContainer {
     display: none;
   }
 }
