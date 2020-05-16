@@ -1,18 +1,24 @@
 @import 'src/base-styles/dependencies';
 
-// Tamanho da caixa da foto para a página onde temos diversas fotos de produto
+figure {
+  margin: 0;
+}
+
+/* Tamanho da caixa da foto para a página onde temos diversas fotos de produto */
 .product--navegation {
-  width: 160px;
+  width: 40%;
 }
 
-// Tamanho da caixa da foto para a página de detalhe do produto
+/* Tamanho da caixa da foto para a página de detalhe do produto */
 .product--detail {
-  width: 375px;
+  width: 100%;
+  position: absolute;
+  top: 65px;
 }
 
-// Tamanho da caixa da foto para a página do carrinho
+/* Tamanho da caixa da foto para a página do carrinho */
 .product--cart {
-  width: 134px;
+  width: 30%;
 }
 
 img {
