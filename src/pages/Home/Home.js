@@ -4,7 +4,7 @@ import Logo from '../../components/Logo/Logo';
 
 const Home = () => {
   return (
-    <div className='Home'>
+    <div className='home'>
       <Logo />
     </div>
   );

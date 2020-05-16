@@ -1,4 +1,6 @@
-.Home {
+@import 'src/base-styles/dependencies';
+
+.home {
   /* Positioning */
   margin-top: 10vh;
   min-height: 90vh;
@@ -6,7 +8,8 @@
   /* Display & Box Model */
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
 
   /* Color */
