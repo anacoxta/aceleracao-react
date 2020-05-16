@@ -1,3 +1,11 @@
-// img {
-//   width: 40px;
-// }
+@import "src/base-styles/dependencies";
+
+.Logo {
+  /* Color */
+  color: $white;
+
+  /* Text */
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 500;
+}

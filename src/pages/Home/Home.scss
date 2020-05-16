@@ -1,9 +1,17 @@
 .Home {
-  width: 100%;
-  min-height: 100vh;
+  /* Positioning */
+  margin-top: 10vh;
+  min-height: 90vh;
+
+  /* Display & Box Model */
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 100%;
+
+  /* Color */
   background-color: var(--secondary-dark);
+
+  /* Text */
+  text-align: center;
 }

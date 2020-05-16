@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+  .desktopSearchContainer, .desktopSearchContainer__inputSearch {
+    /* Display & Box Model */
+    display: none; } }
+
+@media (min-width: 768px) {
+  .mobileSearchBtn, .mobileSearchContainer {
+    /* Display & Box Model */
+    display: none; } }

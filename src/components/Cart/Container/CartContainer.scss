@@ -1,0 +1,97 @@
+@import "src/base-styles/dependencies";
+
+.cart__container__button {
+  /* Display & Box Model */
+  border: none;
+
+  /* Color */
+  background: transparent;
+  color: #717171;
+
+  /* Text */
+  font-size: 24px;
+
+  /* Other */
+  cursor: pointer;
+}
+
+@media (max-width: $md) {
+  .cart__container {
+    /* Positioning */
+    left: 0;
+    position: fixed;
+
+    /* Display & Box Model */
+    height: 190%;
+    visibility: hidden;
+    width: 100%;
+
+    &.cart__container--display {
+      /* Display & Box Model */
+      visibility: visible;
+
+      /* Color */
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .cart__container--active {
+      /* Positioning */
+      position: fixed;
+      right: 3vh;
+      top: 3vh;
+
+      /* Display & Box Model */
+      height: 94%;
+      visibility: visible;
+      width: 90%;
+
+      /* Color */
+      background-color: white;
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .cart__container {
+    /* Positioning */
+    position: fixed;
+    right: 0;
+    top: 10vh;
+
+    /* Display & Box Model */
+    height: 90vh;
+    visibility: hidden;
+    width: 0;
+
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
+    transition: width 0.5s linear;
+
+    &.cart__container--display {
+      /* Display & Box Model */
+      display: flex;
+      justify-content: flex-end;
+      visibility: visible;
+      width: 100%;
+    }
+
+    .cart__container--active {
+      /* Display & Box Model */
+      width: 50%;
+
+      /* Color */
+      background-color: white;
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .cart__container {
+    .cart__container--active {
+      /* Display & Box Model */
+      width: 40%;
+    }
+  }
+}
