@@ -1,47 +1,47 @@
 @import 'src/base-styles/dependencies';
 
-figure {
-  margin: 0;
-}
+// figure {
+//   margin: 0;
+// }
 
 /* Tamanho da caixa da foto para a página onde temos diversas fotos de produto */
-.product--navegation {
-  width: 40%;
-}
+// .product--navegation {
+//   width: 40%;
+// }
 
 /* Tamanho da caixa da foto para a página de detalhe do produto */
-.product--detail {
-  width: 100%;
+// .product--detail {
+//   width: 100%;
   // position: absolute;
   // top: 60px;
-}
+// }
 
 /* Tamanho da caixa da foto para a página do carrinho */
-.product--cart {
-  width: 30%;
-}
+// .product--cart {
+//   width: 30%;
+// }
 
-img {
-  max-width: 100%;
-  cursor: pointer;
-}
+// img {
+//   max-width: 100%;
+//   cursor: pointer;
+// }
 
-@media (min-width: $md) {
-  .product--navegation {
-    width: 26%;
-  }
+// @media (min-width: $md) {
+//   .product--navegation {
+//     width: 26%;
+//   }
 
-  .product--cart {
-    width: 35%;
-  }
-}
+//   .product--cart {
+//     width: 35%;
+//   }
+// }
 
-@media (min-width: $xl) {
-  .product--navegation {
-    width: 21%;
-  }
+// @media (min-width: $xl) {
+//   .product--navegation {
+//     width: 21%;
+//   }
 
-  .product--cart {
-    width: 40%;
-  }
-}
+//   .product--cart {
+//     width: 40%;
+//   }
+// }

@@ -1,31 +1,4 @@
 @charset "UTF-8";
-figure {
-  margin: 0; }
-
 /* Tamanho da caixa da foto para a página onde temos diversas fotos de produto */
-.product--navegation {
-  width: 40%; }
-
 /* Tamanho da caixa da foto para a página de detalhe do produto */
-.product--detail {
-  width: 100%; }
-
 /* Tamanho da caixa da foto para a página do carrinho */
-.product--cart {
-  width: 30%; }
-
-img {
-  max-width: 100%;
-  cursor: pointer; }
-
-@media (min-width: 768px) {
-  .product--navegation {
-    width: 26%; }
-  .product--cart {
-    width: 35%; } }
-
-@media (min-width: 1200px) {
-  .product--navegation {
-    width: 21%; }
-  .product--cart {
-    width: 40%; } }
