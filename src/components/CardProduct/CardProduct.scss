@@ -1,6 +1,5 @@
 @import 'src/base-styles/dependencies';
 
-
 .card-product-default {
   position: relative;
   display: inline-block;
@@ -11,9 +10,6 @@
   margin: 14px;
   width: 41%;
   
-  // @include mq-min(md) {
-  //   background-color: blue;
-  // }
    @include mq-min(md) {
      margin: 0px 0px 30px 42px;
     }
@@ -24,7 +20,6 @@
       max-height: 412px;
 
   }
-
 
   &__info {
     text-decoration:none;
@@ -88,9 +83,6 @@
       top: 77.4%;
     }
 
-    
-
-
     h3 {
       font-size:14px;
       font-weight: normal;
@@ -98,9 +90,7 @@
 
       @include mq-max(xs) {
       font-size: 0.7rem;
-      }
-
-          
+      }     
     }
   }
   
