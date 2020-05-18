@@ -3,7 +3,7 @@
 .card-product-default {
   position: relative;
   display: inline-block;
-  background-color:#FFFAEA;
+  background-color:$white;
   font-family: $title-display-Regular;
   font-style: normal;
   font-weight: normal;
@@ -64,7 +64,7 @@
   &__inner--price-discount {
     background: $translucid-purple;
     height: 10%;
-    color: white;
+    color: $white;
     position: absolute;
     top: 67%;
     width: 100%;
