@@ -39,7 +39,7 @@
   outline: none;
 }
 
-.mobileSearchContainer {
+.mobile-search-container {
   /* Positioning */
   left: 0;
   position: absolute;
@@ -54,15 +54,15 @@
   /* Color */
   background-color: #717171;
 }
-.mobileSearchContainer #inputSearch {
+.mobile-search-container #inputSearch {
   /* Display & Box Model */
   margin: 0;
 }
-.mobileSearchContainer #inputSearch input {
+.mobile-search-container #inputSearch input {
   width: 70vw;
 }
 
-.mobileSearchBtn {
+.mobile-search-btn {
   /* Positioning */
   position: relative;
   /* Display & Box Model */

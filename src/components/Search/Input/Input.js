@@ -24,10 +24,10 @@ const Input = ({ device }) => {
   }, [searchTerm]);
 
   return (
-    <div className={`${device}SearchContainer`}>
+    <div className={`${device}-search-container`}>
       <label
         id="inputSearch"
-        className={`${device}SearchContainer__inputSearch`}
+        className={`${device}-search-container__inputSearch`}
       >
         <input
           type="text"
@@ -40,7 +40,7 @@ const Input = ({ device }) => {
         </button>
       </label>
       {searchResults.length > 0 && (
-        <ul className="productsList">
+        <ul className="products-list">
           {searchResults.map((item) => (
             <li key={item.code_color}>{item.name}</li>
           ))}
