@@ -1,17 +1,12 @@
-.Home {
-  /* Positioning */
-  margin-top: 10vh;
-  min-height: 90vh;
+@import "src/base-styles/dependencies";
 
-  /* Display & Box Model */
+.Home {
   align-items: center;
+  background-color: $secondary-dark;
   display: flex;
   justify-content: center;
-  width: 100%;
-
-  /* Color */
-  background-color: var(--secondary-dark);
-
-  /* Text */
+  margin-top: 10vh;
+  min-height: 90vh;
   text-align: center;
+  width: 100%;
 }

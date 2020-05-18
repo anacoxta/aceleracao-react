@@ -1,21 +1,15 @@
-#inputSearch {
-  /* Positioning */
-  margin-right: 2vh;
+@import "src/base-styles/dependencies";
 
-  /* Display & Box Model */
+#inputSearch {
   align-items: center;
   display: flex;
+  margin-right: 2vh;
 
   input {
-    /* Positioning */
-    height: 28px;
-
-    /* Display & Box Model */
+    background-color: $ghost;
     border: none;
+    height: 28px;
     padding: 0 5px;
-
-    /* Color */
-    background-color: #EEEEEE;
 
     &:focus {
       outline: none;
@@ -23,21 +17,13 @@
   }
 
   button {
-    /* Positioning */
+    background-color: $ghost;
+    border: none;
+    color: $color-icon;
+    cursor: pointer;
     height: 28px;
 
-    /* Display & Box Model */
-    border: none;
-
-    /* Color */
-    background-color: #EEEEEE;
-    color: #717171;
-
-    /* Other */
-    cursor: pointer;
-
     .fa-search {
-      /* Text */
       font-size: 20px;
 
       &:focus {
@@ -51,26 +37,19 @@
   }
 }
 
-.mobileSearchContainer {
-  /* Positioning */
-  left: 0;
-  position: absolute;
-  top: 10vh;
-
-  /* Display & Box Model */
+.mobile-search-container {
+  background-color: $color-icon;
   box-sizing: border-box;
   display: flex;
   height: 10vh;
   justify-content: center;
+  left: 0;
   padding: 0 10px;
+  position: absolute;
+  top: 10vh;
   width: 100%;
 
-  /* Color */
-  background-color: #717171;
-
-
   #inputSearch {
-    /* Display & Box Model */
     margin: 0;
 
     input {
@@ -79,17 +58,26 @@
   }
 }
 
-.mobileSearchBtn {
-  /* Positioning */
-  position: relative;
-
-  /* Display & Box Model */
-  border: none;
-
-  /* Color */
+.mobile-search-btn {
   background: transparent;
-  color: white;
-
-  /* Text */
+  border: none;
+  color: $white;
   font-size: 1.5em;
+  position: relative;
+}
+
+.products-list {
+  background-color: $white;
+  list-style: none;
+  padding: 12px;
+  position: absolute;
+  top: 35px;
+}
+
+@media (max-width: $md) {
+  .products-list {
+    left: 0;
+    right: 0;
+    top: 32px;
+  }
 }

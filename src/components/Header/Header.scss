@@ -1,32 +1,26 @@
-@import 'src/base-styles/dependencies';
+@import "src/base-styles/dependencies";
 
 .header {
-  /* Positioning */
-  height: 10vh;
-  position: fixed;
-  top: 0;
-  width: 100%;
-
-  /* Display & Box Model */
   align-items: center;
   background: $bg-color-header;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
   box-sizing: border-box;
   display: flex;
+  height: 10vh;
   justify-content: space-between;
   padding: 0 18px;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header__btnContainer {
-  /* Display & Box Model */
   align-items: center;
   display: inline-flex;
 }
 
 @media (min-width: $md) {
   .header {
-    /* Display & Box Model */
     padding: 0 36px;
   }
 }
