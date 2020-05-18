@@ -10,13 +10,21 @@
   font-weight: normal;
   margin: 14px;
   width: 41%;
-
-
-
   
-  @include mq(sm) {
-    background-color: blue;
+  // @include mq-min(md) {
+  //   background-color: blue;
+  // }
+   @include mq-min(md) {
+     margin: 0px 0px 30px 42px;
+    }
+
+   @include mq-min(xl) {
+      width: 22.64%;
+      margin: 15px 0px 30px 22px;
+      max-height: 412px;
+
   }
+
 
   &__info {
     text-decoration:none;
@@ -29,11 +37,14 @@
 
   }
 
+
+  // A classe __inner--pricing deverá ser controlada a partir do componente title description
   &__inner--pricing {
     color: $card-description-default;
     margin-top: 8px;
 
     h2 {
+      font-weight: normal;
       margin: 0px;
       font-size: 14px;
       line-height: 16px;
@@ -50,6 +61,7 @@
       color: $card-description-secondary;
       text-decoration-line: line-through;
       font-size:small;
+      font-weight: 100;
     }
   }
 
@@ -64,103 +76,43 @@
     flex-direction: column;
     align-items: center;
 
+     @include mq-min(sm) {
+      top: 76%;
+    }
+
+     @include mq-min(md) {
+      top: 78.8%;
+    }
+
+    @include mq-min(xl) {
+      top: 77.4%;
+    }
+
+    
+
+
     h3 {
       font-size:14px;
       font-weight: normal;
       margin: auto;
+
+      @include mq-max(xs) {
+      font-size: 0.7rem;
+      }
+
+          
     }
   }
   
 }
 
-// Classes que dinâmicas, variam de acordo com página e estado do card
+// Classes que dinâmicas, variam de acordo com estado do card
 // Para testar comente/descomente o estilo
-
-// Card consumido na página de detalhe do produto
-
-// .detail {
-//   width:100%;
-//   margin: 0px;
-//   &__inner--price-discount {
-//     top: 79%;
-
-//     p {
-//      margin: 5px;
-//     }
-//   }
-
-// }
 
 // .no-discount {
 //   display:none;
 // }
 
-
-
-// /* DADOS_PRODUTO */
-
-// position: absolute;
-// width: 285px;
-// height: 40px;
-// left: 0px;
-// bottom: 0px;
-
-
-
-// /* NOME_PRODUTO */
-
-// position: absolute;
-// left: 0%;
-// right: 54.74%;
-// top: 0%;
-// bottom: 60%;
-
-// font-family: Roboto;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 14px;
-// line-height: 16px;
-// /* identical to box height, or 114% */
-
-// color: #000000;
-
-
-
-// /* PRECO_VALIDO */
-
-// position: absolute;
-// left: 0%;
-// right: 80%;
-// top: 60%;
-// bottom: 0%;
-
-// font-family: Roboto;
-// font-style: normal;
-// font-weight: bold;
-// font-size: 14px;
-// line-height: 16px;
-// /* identical to box height, or 114% */
-
-// color: #000000;
-
-
-
-// /* PRECO_ANTERIOR */
-
-// position: absolute;
-// left: 23.16%;
-// right: 57.54%;
-// top: 60%;
-// bottom: 0%;
-
-// font-family: Roboto;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 14px;
-// line-height: 16px;
-// /* identical to box height, or 114% */
-// text-decoration-line: line-through;
-
-// color: #717171;
-
-
+// .no-remarcable {
+//   display: none;
+// }
