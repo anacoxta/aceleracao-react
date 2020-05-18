@@ -4,3 +4,10 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1440px;
+
+
+$breakpoints: (
+  'xs':  320px,
+  'sm': 576px,
+  'xl':  1200px
+) !default;

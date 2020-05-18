@@ -1,0 +1,166 @@
+@import 'src/base-styles/dependencies';
+
+
+.card-product-default {
+  position: relative;
+  display: inline-block;
+  background-color:#FFFAEA;
+  font-family: $title-display-Regular;
+  font-style: normal;
+  font-weight: normal;
+  margin: 14px;
+  width: 41%;
+
+
+
+  
+  @include mq(sm) {
+    background-color: blue;
+  }
+
+  &__info {
+    text-decoration:none;
+  }
+
+  &__inner {
+    img {
+      width: 100%;
+    }
+
+  }
+
+  &__inner--pricing {
+    color: $card-description-default;
+    margin-top: 8px;
+
+    h2 {
+      margin: 0px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    p {
+      margin: 8px 0px;
+      font-weight:bold;
+      margin-right: 2px;
+      font-size:small;
+    }
+
+    span {
+      color: $card-description-secondary;
+      text-decoration-line: line-through;
+      font-size:small;
+    }
+  }
+
+  &__inner--price-discount {
+    background: $translucid-purple;
+    height: 10%;
+    color: white;
+    position: absolute;
+    top: 67%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size:14px;
+      font-weight: normal;
+      margin: auto;
+    }
+  }
+  
+}
+
+// Classes que dinâmicas, variam de acordo com página e estado do card
+// Para testar comente/descomente o estilo
+
+// Card consumido na página de detalhe do produto
+
+// .detail {
+//   width:100%;
+//   margin: 0px;
+//   &__inner--price-discount {
+//     top: 79%;
+
+//     p {
+//      margin: 5px;
+//     }
+//   }
+
+// }
+
+// .no-discount {
+//   display:none;
+// }
+
+
+
+// /* DADOS_PRODUTO */
+
+// position: absolute;
+// width: 285px;
+// height: 40px;
+// left: 0px;
+// bottom: 0px;
+
+
+
+// /* NOME_PRODUTO */
+
+// position: absolute;
+// left: 0%;
+// right: 54.74%;
+// top: 0%;
+// bottom: 60%;
+
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 14px;
+// line-height: 16px;
+// /* identical to box height, or 114% */
+
+// color: #000000;
+
+
+
+// /* PRECO_VALIDO */
+
+// position: absolute;
+// left: 0%;
+// right: 80%;
+// top: 60%;
+// bottom: 0%;
+
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 14px;
+// line-height: 16px;
+// /* identical to box height, or 114% */
+
+// color: #000000;
+
+
+
+// /* PRECO_ANTERIOR */
+
+// position: absolute;
+// left: 23.16%;
+// right: 57.54%;
+// top: 60%;
+// bottom: 0%;
+
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 14px;
+// line-height: 16px;
+// /* identical to box height, or 114% */
+// text-decoration-line: line-through;
+
+// color: #717171;
+
+
