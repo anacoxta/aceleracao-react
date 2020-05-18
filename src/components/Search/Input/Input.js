@@ -16,7 +16,7 @@ const Input = ({ device }) => {
 
     if (searchTerm !== "") {
       results = MOCK.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm)
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
