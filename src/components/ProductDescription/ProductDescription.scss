@@ -1,0 +1,26 @@
+@import "src/base-styles/dependencies";
+
+.productDescription {
+    &__pricing{
+        line-height: 1em;
+        font-size: 0.875em;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__name{
+        font-family: $roboto;
+        font-weight: 400;
+        margin-bottom: 0.5em;
+    }
+    &__price{
+        font-weight: 400;
+        &--reg{
+            text-decoration: line-through;
+            color: $color-icon;
+        }
+        &--actual{
+            font-weight: 700;
+            margin-right: 0.562em;
+        }
+    }
+}
