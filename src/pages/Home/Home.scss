@@ -1,20 +1,12 @@
-@import 'src/base-styles/dependencies';
+@import "src/base-styles/dependencies";
 
-.home {
-  /* Positioning */
+.Home {
+  align-items: center;
+  background-color: $secondary-dark;
+  display: flex;
+  justify-content: center;
   margin-top: 10vh;
   min-height: 90vh;
-
-  /* Display & Box Model */
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-
-  /* Color */
-  background-color: var(--secondary-dark);
-
-  /* Text */
   text-align: center;
+  width: 100%;
 }
