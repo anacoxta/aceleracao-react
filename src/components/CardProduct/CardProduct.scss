@@ -1,5 +1,9 @@
 @import 'src/base-styles/dependencies';
 
+.card-product-list {
+  padding:0px;
+}
+
 .card-product-default {
   position: relative;
   display: inline-block;
@@ -37,7 +41,6 @@
   // A classe __inner--pricing deverá ser controlada a partir do componente title description
   &__inner--pricing {
     color: $card-description-default;
-    margin-top: 8px;
 
     h2 {
       font-weight: normal;
