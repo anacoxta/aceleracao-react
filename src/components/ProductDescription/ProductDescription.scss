@@ -85,11 +85,9 @@ p {
 
   @media (min-width: $lg) {
     &.isInsideCart {
-      .productDescription {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-      }
     }
   }
 }
