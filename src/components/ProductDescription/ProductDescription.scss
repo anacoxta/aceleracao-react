@@ -1,90 +1,95 @@
 @import "src/base-styles/dependencies";
 
-span{
-    display: inline-block;
+span {
+  display: inline-block;
 }
 
-p{
-    margin-top: 0;
-    
+p {
+  margin-top: 0;
 }
 
 .productDescription {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    &.isInsideHome{
-        .productDescription__pricing-group{
-            display: flex;
-        }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &.isInsideHome {
+    .productDescription__pricingGroup {
+      display: flex;
     }
-    &.isInsideProduct{
-        .productDescription{
-            &__name{
-                margin-bottom: 12.2px;
-                font-size: 16px;
-            }
-            &__pricing-group{
-                display: flex;
-                flex-direction: column;
-            }
-            &__actual{
-                margin-bottom: 11px;
-                font-size: 16px;
-            }
-        }
-    }
-    &.isInsideCart{
-        .productDescription{
-            &__actual{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            &__price--actual{
-                margin-bottom: 11px;
-                font-size: 16px;
-            }
-        }
-        @media (min-width: $lg){
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-    }
-    &__pricing-group, &__name{
-        line-height: 16px;
-        font-size: 14px;
-    }
-    &__name{
-        font-family: $roboto;
-        font-weight: 400;
-        margin-bottom: 0.5em;
-    }
-
-    &__reg{
+  }
+  &.isInsideProduct {
+    .productDescription {
+      &__name {
+        margin-bottom: 12.2px;
+        font-size: 16px;
+      }
+      &__pricingGroup {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+      }
+      &__actual {
+        margin-bottom: 11px;
+        font-size: 16px;
+      }
     }
-    &__price{
-        font-weight: 400;
-        &--reg{
-            text-decoration: line-through;
-            color: $color-icon;
-            display: flex;
-            justify-content: flex-start;
-        }
-        &--actual{
-            font-weight: 700;
-            margin-right: 0.562em;
-        }
+  }
+  &.isInsideCart {
+    .productDescription {
+      &__actual {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &__price--actual {
+        margin-bottom: 11px;
+        font-size: 16px;
+      }
     }
-    &__installments{
-        color: $secondary
+  }
+  &__pricingGroup,
+  &__name {
+    line-height: 16px;
+    font-size: 14px;
+  }
+  &__name {
+    font-family: $roboto;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+  }
+
+  &__reg {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__price {
+    font-weight: 400;
+    &--reg {
+      text-decoration: line-through;
+      color: $color-icon;
+      display: flex;
+      justify-content: flex-start;
     }
-    &__discount-percent{
-        color: $color-icon;
-        margin-left: 0.5em;
+    &--actual {
+      font-weight: 700;
+      margin-right: 0.562em;
     }
+  }
+  &__installments {
+    color: $secondary;
+  }
+  &__discountPercent {
+    color: $color-icon;
+    margin-left: 0.5em;
+  }
+
+  @media (min-width: $lg) {
+    &.isInsideCart {
+      .productDescription {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  }
 }
