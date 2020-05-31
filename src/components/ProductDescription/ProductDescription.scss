@@ -1,4 +1,4 @@
-@import "src/base-styles/dependencies";
+@import 'src/base-styles/dependencies';
 
 span {
   display: inline-block;
@@ -35,6 +35,11 @@ p {
     }
   }
   &.isInsideCart {
+    @media (min-width: $lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
     .productDescription {
       &__actual {
         display: flex;
@@ -81,13 +86,5 @@ p {
   &__discountPercent {
     color: $color-icon;
     margin-left: 0.5em;
-  }
-
-  @media (min-width: $lg) {
-    &.isInsideCart {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
   }
 }
