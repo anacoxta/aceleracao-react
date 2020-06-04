@@ -35,7 +35,7 @@ p {
     }
   }
   &.isInsideCart {
-    @media (min-width: $lg) {
+    @include mq-min(lg) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
