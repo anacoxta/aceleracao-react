@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import './Image.scss'
+import './Image.scss';
 
 const Image = ({ className, src, alt }) => {
   return (
     <figure className={className}>
       <img src={src} alt={alt}/>
     </figure>
-  )
-}
+  );
+};
 
-export default Image
+export default Image;

@@ -12,6 +12,14 @@ img {
 .product {
   &__navegation {
     width: 40%;
+
+    @include mq-min(md) {
+      width: 26%;
+    }
+
+    @include mq-min(xl) {
+      width: 21%;
+    }
   }
 
   &__detail {
@@ -22,28 +30,12 @@ img {
 
   &__cart {
     width: 30%;
-  }
-}
 
-@media (min-width: $md) {
-  .product {
-    &__navegation {
-      width: 26%;
-    }
-
-    &__cart {
+    @include mq-min(md) {
       width: 35%;
     }
-  }
-}
 
-@media (min-width: $xl) {
-  .product {
-    &__navegation {
-      width: 21%;
-    }
-
-    &__cart {
+    @include mq-min(xl) {
       width: 40%;
     }
   }
