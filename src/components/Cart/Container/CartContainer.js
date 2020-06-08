@@ -1,5 +1,6 @@
-import React from "react";
-import "./CartContainer.scss";
+import React from 'react';
+import './CartContainer.scss';
+import CartModal from '../Modal/CartModal'
 
 const CartContainer = ({ activeCart, setActiveCart }) => {
   return (
@@ -22,6 +23,7 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
         >
           <i className="fas fa-times-circle"></i>
         </button>
+        <CartModal />
       </div>
     </div>
   );
