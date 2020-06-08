@@ -1,13 +1,5 @@
 @import "src/base-styles/dependencies";
 
-.cart__container__button {
-  background: transparent;
-  border: none;
-  color: $color-icon;
-  cursor: pointer;
-  font-size: 24px;
-}
-
 @media (max-width: $md) {
   .cart__container {
     height: 190%;
@@ -65,7 +57,7 @@
 @media (min-width: $lg) {
   .cart__container {
     .cart__container--active {
-      width: 40%;
+      width: 37.5em;
     }
   }
 }

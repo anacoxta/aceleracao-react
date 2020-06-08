@@ -16,14 +16,7 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
         role="dialog"
         aria-label="Carrinho de compras"
       >
-        <button
-          className="cart__container__button"
-          aria-label="Fechar carrinho de compras"
-          onClick={() => setActiveCart(!activeCart)}
-        >
-          <i className="fas fa-times-circle"></i>
-        </button>
-        <CartModal />
+        <CartModal activeCart={activeCart} setActiveCart={setActiveCart} />
       </div>
     </div>
   );
