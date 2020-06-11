@@ -2,11 +2,16 @@
 
 .home {
   align-items: center;
-  background-color: $secondary-dark;
+  background-color: $white;
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
-  min-height: 90vh;
+  margin: 10vh 0 4.5rem 0;
+  padding: 1rem;
   text-align: center;
-  width: 100%;
+  min-height: calc(90vh - 6.5rem);
+
+  @include mq-min(md) {
+    padding: 3rem 4rem;
+    min-height: calc(90vh - 10.5rem);
+  }
 }
