@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss';
-import Logo from '../../components/Logo/Logo';
+import './style.scss';
+import Logo from '../../components/Logo';
 
 import { getCatalog } from '../../services/catalog';
 

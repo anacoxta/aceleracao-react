@@ -1,5 +1,5 @@
 import React from 'react';
-import './CardProduct.scss'
+import './style.scss'
 import Image from '../../assets/images/product.png'
 
 const CardProduct = () => {

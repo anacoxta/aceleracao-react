@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Input.scss';
+import './style.scss';
 
 import { getCatalog } from '../../../services/catalog';
 
