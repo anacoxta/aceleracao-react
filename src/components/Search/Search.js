@@ -8,7 +8,7 @@ const Search = () => {
   return (
     <>
       <button
-        className="mobile-search-btn"
+        className="mobileSearchBtn"
         onClick={() => setMobileSearch(!mobileSearch)}
       >
         <i className="fas fa-search"></i>
