@@ -26,7 +26,7 @@ const Input = ({ device }) => {
     }
 
     setSearchResults(results);
-  }, [searchTerm]);
+  }, [searchTerm, catalog]);
 
   return (
     <div className={`${device}SearchContainer`}>
