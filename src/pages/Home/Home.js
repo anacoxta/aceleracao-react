@@ -10,7 +10,6 @@ const Home = () => {
     getCatalog()
       .then(resp => setCatalog(resp.data));
   }, []);
-  // console.log(catalog)
 
   return (
     <div className='Home'>
