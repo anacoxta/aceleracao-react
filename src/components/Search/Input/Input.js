@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from "react";
-import "./Input.scss";
+import React, { useState, useEffect } from 'react';
+import './Input.scss';
 
-// import { MOCK } from "../../../mock";
-
-import { getCatalog } from '../../../services/catalog'
-
-
+import { getCatalog } from '../../../services/catalog';
 
 const Input = ({ device }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [catalog, setCatalog] = useState([])
+  const [catalog, setCatalog] = useState([]);
 
-useEffect(() => {
-    getCatalog()
-      .then(resp => setCatalog(resp.data));
+  useEffect(() => {
+    getCatalog().then((resp) => setCatalog(resp.data));
   }, []);
 
   const handleChange = (event) => {
@@ -24,7 +19,7 @@ useEffect(() => {
   useEffect(() => {
     let results = [];
 
-    if (searchTerm !== "") {
+    if (searchTerm !== '') {
       results = catalog.filter((product) =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -35,22 +30,14 @@ useEffect(() => {
 
   return (
     <div className={`${device}SearchContainer`}>
-      <label
-        id="inputSearch"
-        className={`${device}SearchContainer__inputSearch`}
-      >
-        <input
-          type="text"
-          placeholder="Pesquisar"
-          value={searchTerm}
-          onChange={handleChange}
-        />
+      <label id='inputSearch' className={`${device}SearchContainer__inputSearch`}>
+        <input type='text' placeholder='Pesquisar' value={searchTerm} onChange={handleChange} />
         <button>
-          <i className="fas fa-search"></i>
+          <i className='fas fa-search'></i>
         </button>
       </label>
       {searchResults.length > 0 && (
-        <ul className="productsList">
+        <ul className='productsList'>
           {searchResults.map((item) => (
             <li key={item.code_color}>{item.name}</li>
           ))}
