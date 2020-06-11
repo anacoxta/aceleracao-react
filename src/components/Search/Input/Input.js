@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./Input.scss";
 
-import { MOCK } from "../../../mock";
+// import { MOCK } from "../../../mock";
+
+import { getCatalog } from '../../../services/catalog'
+
+
 
 const Input = ({ device }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [catalog, setCatalog] = useState([])
+
+useEffect(() => {
+    getCatalog()
+      .then(resp => setCatalog(resp.data));
+  }, []);
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -15,7 +25,7 @@ const Input = ({ device }) => {
     let results = [];
 
     if (searchTerm !== "") {
-      results = MOCK.filter((product) =>
+      results = catalog.filter((product) =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
