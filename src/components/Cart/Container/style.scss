@@ -38,7 +38,7 @@
     height: 90vh;
     position: fixed;
     right: 0;
-    top: 10vh;
+    top: calc(23% - 72px);
     transition: width 0.5s linear;
     visibility: hidden;
     width: 0;
