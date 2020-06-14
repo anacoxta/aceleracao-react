@@ -1,5 +1,5 @@
 import React from 'react';
-import './CartBtn.scss';
+import './style.scss';
 
 const CartBtn = ({ activeCart, setActiveCart }) => {
   return (

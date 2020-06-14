@@ -37,7 +37,7 @@
   }
 }
 
-.mobile-search-container {
+.mobileSearchContainer {
   background-color: $color-icon;
   box-sizing: border-box;
   display: flex;
@@ -58,7 +58,7 @@
   }
 }
 
-.mobile-search-btn {
+.mobileSearchBtn {
   background: transparent;
   border: none;
   color: $white;
@@ -66,7 +66,7 @@
   position: relative;
 }
 
-.products-list {
+.productsList {
   background-color: $white;
   list-style: none;
   padding: 12px;
@@ -75,7 +75,7 @@
 }
 
 @media (max-width: $md) {
-  .products-list {
+  .productsList {
     left: 0;
     right: 0;
     top: 32px;
