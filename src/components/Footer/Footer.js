@@ -12,12 +12,12 @@ const Footer = () => {
           &nbsp;|&nbsp;
         </span>
         <span className="footer__leftBlock__text footer__leftBlock--sponsors">
-          <a className="link" href="https://codenation.dev/">Codenation</a>
+          <a className="link" href="https://codenation.dev/" target="blank">Codenation</a>
           &nbsp;+&nbsp;
-          <a className="link" href="https://loft.com.br/">Loft</a>
+          <a className="link" href="https://loft.com.br/" target="blank">Loft</a>
         </span>
       </div>
-      <a className="footer__rightBlock link" href="https://github.com/anacoxta/aceleracao-react">
+      <a className="footer__rightBlock link" href="https://github.com/anacoxta/aceleracao-react" target="blank">
         <i class="footer__rightBlock__icon fab fa-github"></i>
       </a>
     </footer>
