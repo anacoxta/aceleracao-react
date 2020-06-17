@@ -1,0 +1,31 @@
+@import 'src/base-styles/dependencies';
+
+span {
+  font-weight: bold;
+}
+
+.containerUnit {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.buttonUnit {
+  width: 18px;
+  height: 20px;
+  border: none;
+  font-weight: bold;
+  color: $secondary;
+  background-color: $primary-lighter;
+  padding: 0px 5px 1px;
+
+  &__fontSize--minus {
+    font-size: 18px;
+  }
+
+  &__fontSize--plus {
+    font-size: 15px;
+  }
+
+}
