@@ -19,6 +19,7 @@ span {
   color: $secondary;
   background-color: $primary-lighter;
   padding: 0px 5px 1px;
+  cursor: pointer;
 
   &__fontSize--minus {
     font-size: 18px;
