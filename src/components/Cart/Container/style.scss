@@ -1,11 +1,23 @@
-@import "src/base-styles/dependencies";
+@import 'src/base-styles/dependencies';
 
-.cart__container__button {
-  background: transparent;
-  border: none;
-  color: $color-icon;
-  cursor: pointer;
-  font-size: 24px;
+.cart__container {
+  &__button {
+    background: transparent;
+    border: none;
+    color: $color-icon;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  &__btnGroup {
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0 25px;
+    position: absolute;
+    right: 0;
+    width: 40%;
+  }
 }
 
 @media (max-width: $md) {
@@ -35,10 +47,12 @@
 
 @media (min-width: $md) {
   .cart__container {
-    height: 90vh;
+    // height: 90vh;
+    height: 92vh;
     position: fixed;
     right: 0;
-    top: calc(23% - 72px);
+    // top: calc(23% - 72px);
+    top: calc(18% - 75px);
     transition: width 0.5s linear;
     visibility: hidden;
     width: 0;
