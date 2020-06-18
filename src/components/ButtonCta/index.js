@@ -1,8 +1,12 @@
 import React from 'react';
 import './style.scss';
 
-const CardProduct = (text, handleClick, style) => {
-  return <button className={`buttonCta buttonCta--${style}`}>Button cta</button>;
+const ButtonCta = ({ text, handleClick, layout }) => {
+  return (
+    <button className={`buttonCta buttonCta--${layout}`} onClick={handleClick}>
+      {text}
+    </button>
+  );
 };
 
-export default CardProduct;
+export default ButtonCta;
