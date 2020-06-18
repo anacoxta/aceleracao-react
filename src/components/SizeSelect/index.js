@@ -29,7 +29,7 @@ const SizeSelect = () => {
             className={`sizeSelect__box sizeSelect__box--${
               size.available ? 'available' : 'unavailable'
             }  ${selectedSize === size.size ? 'selected' : ''}`}
-            disabled={!size.available}
+            aria-disabled={!size.available}
             onClick={(event) => handleSizeSelection(event)}
           >
             {size.size}
