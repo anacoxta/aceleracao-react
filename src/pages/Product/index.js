@@ -1,6 +1,15 @@
 import React from 'react';
-import './style.scss';
+import { useParams } from 'react-router';
+import '../defaultStyles.scss';
 
-const Product = () => <h1>Página do produto</h1>;
+const Product = () => {
+  const { productCode } = useParams();
+
+  return (
+    <div className='pageContent'>
+      <h1>Página do produto {productCode}</h1>
+    </div>
+  );
+};
 
 export default Product;
