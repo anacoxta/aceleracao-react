@@ -2,15 +2,19 @@
 
 .buttonCta {
   cursor: pointer;
-  font-size: 14px;
+  font-family: $title-display-Regular;
+  font-size: 13px;
   font-weight: bold;
-  height: 52px;
+  height: 6vh;
   text-transform: uppercase;
-  width: 40%;
+  width: 45%;
 
-  @media (max-width: $md) {
+  @media (max-width: $lg) {
+    height: 8vh;
+  }
+
+  @media (max-width: $sm) {
     height: 30px;
-    font-size: 10px;
     margin-bottom: 5px;
     width: 90%;
   }

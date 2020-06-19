@@ -1,32 +1,16 @@
 @import 'src/base-styles/dependencies';
 
 .cart__container {
-  @media (min-width: $md) {
-    position: fixed;
-    right: 0;
-    visibility: hidden;
-    width: 0;
-  }
-
-  @media (max-width: $md) {
-    left: 0;
-    position: fixed;
-    visibility: hidden;
-    width: 100%;
-  }
+  position: fixed;
+  right: 0;
+  visibility: hidden;
+  width: 100%;
 
   &.cart__container--display {
     background-color: $shadow;
     bottom: 0;
     height: 100%;
     visibility: visible;
-
-    @media (min-width: $md) {
-      display: flex;
-      justify-content: flex-end;
-      visibility: visible;
-      width: 100%;
-    }
   }
 
   .cart__container--active {
@@ -49,13 +33,10 @@
     -o-transition: width 0.5s linear;
 
     @media (max-width: $sm) {
-      position: fixed;
-      right: 8vh;
-      top: 3vh;
-      visibility: visible;
-      width: 90%;
       height: 92%;
       right: 4vh;
+      top: 3vh;
+      width: 90%;
     }
 
     @media (max-width: $xs) {
@@ -78,32 +59,14 @@
     padding: 15px 0 25px;
     position: absolute;
     right: 0;
+    width: 100%;
 
-    @media (min-width: $md) {
-      width: 50%;
-    }
-
-    @media (min-width: $lg) {
-      width: 40%;
-    }
-
-    @media (max-width: $md) {
-      width: 100%;
-    }
-
-    @media (max-width: $xs) {
+    @media (max-width: $sm) {
       flex-wrap: wrap;
       justify-content: center;
       padding: 15px 0 10px;
       right: unset;
       width: 100%;
-    }
-
-    @media (min-width: $xs) and (max-width: $sm) {
-      width: 100%;
-      right: unset;
-      display: flex;
-      padding: 15px 0;
     }
   }
 }
