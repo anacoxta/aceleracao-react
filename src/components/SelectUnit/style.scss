@@ -1,9 +1,5 @@
 @import 'src/base-styles/dependencies';
 
-span {
-  font-weight: bold;
-}
-
 .containerUnit {
   width: 100px;
   display: flex;
@@ -29,4 +25,15 @@ span {
     font-size: 15px;
   }
 
+}
+
+.unitNumber {
+  font-weight: bold;
+}
+
+.unitMessage {
+  width: 150px;
+  font-size: 9px;
+  color: #ff2020;
+  margin: 8px 0px 0px -50px;
 }
