@@ -5,11 +5,9 @@ import ButtonCta from '../ButtonCta';
 import ProductDescription from '../ProductDescription';
 import SizeSelect from '../SizeSelect';
 
-const ProductInfo = () => {
-  const handleBagBtn = () => {
-    alert('Adicionando à sacola!');
-  };
+import { handleBagBtn } from '../../../utils/buttonFunctions';
 
+const ProductInfo = () => {
   return (
     <div className='productInfo'>
       <ProductDescription />

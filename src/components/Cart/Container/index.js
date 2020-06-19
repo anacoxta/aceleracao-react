@@ -2,16 +2,9 @@ import React from 'react';
 import './style.scss';
 
 import ButtonCta from '../../ButtonCta';
+import { handleKeepBuyingBtn, handlePaymentBtn } from '../../../utils/buttonFunctions';
 
 const CartContainer = ({ activeCart, setActiveCart }) => {
-  const handleKeepBuyingBtn = () => {
-    alert('Continue comprando!');
-  };
-
-  const handlePaymentBtn = () => {
-    alert('Redirecionando para o pagamento!');
-  };
-
   return (
     <div className={activeCart ? 'cart__container cart__container--display' : 'cart__container'}>
       <div
