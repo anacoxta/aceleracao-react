@@ -8,6 +8,13 @@
   text-transform: uppercase;
   width: 40%;
 
+  @media (max-width: $md) {
+    height: 30px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    width: 90%;
+  }
+
   &--default {
     border-color: $secondary-dark;
     background-color: $white;

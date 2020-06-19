@@ -1,6 +1,64 @@
 @import 'src/base-styles/dependencies';
 
 .cart__container {
+  @media (min-width: $md) {
+    height: 90vh;
+    position: fixed;
+    right: 0;
+    top: calc(23% - 4.5rem);
+    transition: width 0.5s linear;
+    visibility: hidden;
+    width: 0;
+
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
+  }
+
+  @media (max-width: $md) {
+    height: 190%;
+    left: 0;
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+  }
+
+  &.cart__container--display {
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: flex-end;
+      visibility: visible;
+      width: 100%;
+    }
+
+    @media (max-width: $md) {
+      background-color: $shadow;
+      visibility: visible;
+    }
+  }
+
+  .cart__container--active {
+    @media (min-width: $md) {
+      background-color: $white;
+      width: 50%;
+    }
+
+    @media (min-width: $lg) {
+      width: 40%;
+    }
+
+    @media (max-width: $md) {
+      background-color: $white;
+      height: 94%;
+      position: fixed;
+      right: 3vh;
+      top: 3vh;
+      visibility: visible;
+      width: 90%;
+    }
+  }
+
   &__button {
     background: transparent;
     border: none;
@@ -16,70 +74,21 @@
     padding: 15px 0 25px;
     position: absolute;
     right: 0;
-    width: 40%;
-  }
-}
 
-@media (max-width: $md) {
-  .cart__container {
-    height: 190%;
-    left: 0;
-    position: fixed;
-    visibility: hidden;
-    width: 100%;
-
-    &.cart__container--display {
-      background-color: $shadow;
-      visibility: visible;
-    }
-
-    .cart__container--active {
-      background-color: $white;
-      height: 94%;
-      position: fixed;
-      right: 3vh;
-      top: 3vh;
-      visibility: visible;
-      width: 90%;
-    }
-  }
-}
-
-@media (min-width: $md) {
-  .cart__container {
-    // height: 90vh;
-    height: 92vh;
-    position: fixed;
-    right: 0;
-    // top: calc(23% - 72px);
-    top: calc(18% - 75px);
-    transition: width 0.5s linear;
-    visibility: hidden;
-    width: 0;
-
-    -webkit-transition: width 0.5s linear;
-    -moz-transition: width 0.5s linear;
-    -ms-transition: width 0.5s linear;
-    -o-transition: width 0.5s linear;
-
-    &.cart__container--display {
-      display: flex;
-      justify-content: flex-end;
-      visibility: visible;
-      width: 100%;
-    }
-
-    .cart__container--active {
-      background-color: $white;
+    @media (min-width: $md) {
       width: 50%;
     }
-  }
-}
 
-@media (min-width: $lg) {
-  .cart__container {
-    .cart__container--active {
+    @media (min-width: $lg) {
       width: 40%;
+    }
+
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 15px 0 10px;
+      right: unset;
+      width: 100%;
     }
   }
 }
