@@ -2,22 +2,13 @@
 
 .cart__container {
   @media (min-width: $md) {
-    height: 90vh;
     position: fixed;
     right: 0;
-    top: calc(23% - 4.5rem);
-    transition: width 0.5s linear;
     visibility: hidden;
     width: 0;
-
-    -webkit-transition: width 0.5s linear;
-    -moz-transition: width 0.5s linear;
-    -ms-transition: width 0.5s linear;
-    -o-transition: width 0.5s linear;
   }
 
   @media (max-width: $md) {
-    height: 190%;
     left: 0;
     position: fixed;
     visibility: hidden;
@@ -25,37 +16,50 @@
   }
 
   &.cart__container--display {
+    background-color: $shadow;
+    bottom: 0;
+    height: 100%;
+    visibility: visible;
+
     @media (min-width: $md) {
       display: flex;
       justify-content: flex-end;
       visibility: visible;
       width: 100%;
     }
-
-    @media (max-width: $md) {
-      background-color: $shadow;
-      visibility: visible;
-    }
   }
 
   .cart__container--active {
-    @media (min-width: $md) {
-      background-color: $white;
-      width: 50%;
-    }
+    background-color: $white;
+    height: 100%;
+    max-width: 400px;
+    opacity: 1;
+    padding-top: 11px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: width 0.5s linear;
+    visibility: visible;
+    width: 40%;
+    z-index: 105;
 
-    @media (min-width: $lg) {
-      width: 40%;
-    }
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
 
-    @media (max-width: $md) {
-      background-color: $white;
-      height: 94%;
+    @media (max-width: $sm) {
       position: fixed;
-      right: 3vh;
+      right: 8vh;
       top: 3vh;
       visibility: visible;
       width: 90%;
+      height: 92%;
+      right: 4vh;
+    }
+
+    @media (max-width: $xs) {
+      right: 3.1vh;
     }
   }
 
@@ -83,12 +87,23 @@
       width: 40%;
     }
 
+    @media (max-width: $md) {
+      width: 100%;
+    }
+
     @media (max-width: $xs) {
       flex-wrap: wrap;
       justify-content: center;
       padding: 15px 0 10px;
       right: unset;
       width: 100%;
+    }
+
+    @media (min-width: $xs) and (max-width: $sm) {
+      width: 100%;
+      right: unset;
+      display: flex;
+      padding: 15px 0;
     }
   }
 }
