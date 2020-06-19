@@ -18,10 +18,13 @@ const Input = ({ device }) => {
 
   useEffect(() => {
     let results = [];
+    const hasAccentuation = new RegExp(
+      /^\w+$/
+    );
 
-    if (searchTerm !== '') {
+    if (searchTerm !== "") {
       results = catalog.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        hasAccentuation.test(searchTerm) ? product.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(searchTerm.toLowerCase()) : product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
