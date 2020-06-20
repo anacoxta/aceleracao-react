@@ -1,6 +1,7 @@
-import React from 'react';
-import './CartContainer.scss';
-import CartModal from '../Modal/CartModal'
+import React from "react";
+import "./style.scss";
+
+import CartModal from '../Modal/CartModal';
 
 const CartContainer = ({ activeCart, setActiveCart }) => {
   return (

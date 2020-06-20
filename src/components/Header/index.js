@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import "./Header.css";
-import Logo from "../Logo/Logo";
-import CartBtn from "../Cart/Button/CartBtn";
-import CartContainer from "../Cart/Container/CartContainer";
-import Search from "../Search/Search";
+import React, { useState } from 'react';
+import './style.scss';
+import Logo from '../Logo';
+import CartBtn from '../Cart/Button';
+import CartContainer from '../Cart/Container';
+import Search from '../Search';
 
 const Header = () => {
   const [activeCart, setActiveCart] = useState(false);
 
   return (
-    <header className="header">
+    <header className='header'>
       <Logo />
-      <div className="header__btnContainer">
+      <div className='header__btnContainer'>
         <Search />
         <CartBtn activeCart={activeCart} setActiveCart={setActiveCart} />
       </div>

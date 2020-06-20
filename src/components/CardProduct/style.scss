@@ -1,10 +1,10 @@
 @import 'src/base-styles/dependencies';
 
-.card-product-list {
+.cardProductList {
   padding:0px;
 }
 
-.card-product-default {
+.cardProductDefault {
   position: relative;
   display: inline-block;
   background-color:$white;
@@ -64,7 +64,7 @@
     }
   }
 
-  &__inner--price-discount {
+  &__inner--priceDiscount {
     background: $translucid-purple;
     height: 10%;
     color: $white;
@@ -103,10 +103,10 @@
 // Classes que dinâmicas, variam de acordo com estado do card
 // Para testar comente/descomente o estilo
 
-// .no-discount {
+// .noDiscount {
 //   display:none;
 // }
 
-// .no-remarcable {
+// .noRemarcable {
 //   display: none;
 // }
