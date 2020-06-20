@@ -6,14 +6,14 @@
   visibility: hidden;
   width: 100%;
 
-  &.cart__container--display {
+  &--display {
     background-color: $shadow;
     bottom: 0;
     height: 100%;
     visibility: visible;
   }
 
-  .cart__container--active {
+  &--active {
     background-color: $white;
     height: 100%;
     max-width: 400px;
