@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style.scss';
-import Logo from '../../components/Logo';
+import '../defaultStyles.scss';
 
 import { getCatalog } from '../../services/catalog';
 
@@ -12,8 +11,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='home'>
-      <Logo />
+    <div className='pageContent'>
+      <h1>Home</h1>
     </div>
   );
 };
