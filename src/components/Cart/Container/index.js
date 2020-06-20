@@ -26,7 +26,7 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
             layout='default'
             handleClick={handleKeepBuyingBtn}
           />
-          <ButtonCta text='Ir para o pagamento' layout='filled' handleClick={handlePaymentBtn} />
+          <ButtonCta text='Finalizar pagamento' layout='filled' handleClick={handlePaymentBtn} />
         </div>
       </div>
     </div>
