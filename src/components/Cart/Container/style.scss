@@ -25,6 +25,7 @@
     visibility: visible;
     width: 40%;
     z-index: 105;
+    overflow-y: scroll;
 
     -webkit-transition: width 0.5s linear;
     -moz-transition: width 0.5s linear;
@@ -51,21 +52,19 @@
     font-size: 24px;
   }
 
-  &__btnGroup {
+  &__group {
     bottom: 0;
-    display: flex;
-    justify-content: space-evenly;
     padding: 15px 0 25px;
     position: absolute;
     right: 0;
     width: 100%;
+    background-color: $white;
 
     @media (max-width: $sm) {
-      flex-wrap: wrap;
-      justify-content: center;
       padding: 15px 0 10px;
       right: unset;
-      width: 100%;
+      width: 90%;
+      position: fixed;
     }
   }
 
@@ -74,5 +73,15 @@
     margin:  0 0.5em 1rem;
     width: 95%;
     background-color: $ghost;
+  }
+
+  &__btnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    @media (min-width: $md) {
+      justify-content: space-evenly;
+    }
   }
 }

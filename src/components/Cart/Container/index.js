@@ -15,17 +15,19 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
         aria-label='Carrinho de compras'
       >
         <CartModal activeCart={activeCart} setActiveCart={setActiveCart} />
-        <div className='cart__container__btnGroup'>
+        <div className='cart__container__group'>
           <div className='cart__container__subtotal'>
             <span>Subtotal</span>
             <span>R$ 249,90</span>
           </div>
-          <ButtonCta
-            text='Continuar comprando'
-            layout='default'
-            handleClick={handleKeepBuyingBtn}
-          />
-          <ButtonCta text='Finalizar pagamento' layout='filled' handleClick={handlePaymentBtn} />
+          <div className='cart__container__btnGroup'>
+            <ButtonCta
+              text='Continuar comprando'
+              layout='default'
+              handleClick={handleKeepBuyingBtn}
+            />
+            <ButtonCta text='Finalizar pagamento' layout='filled' handleClick={handlePaymentBtn} />
+          </div>
         </div>
       </div>
     </div>
