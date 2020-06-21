@@ -27,6 +27,9 @@ const CartModal = ({ activeCart, setActiveCart }) => {
           <Image className='product__cart' src={ProductPhoto} />
           <div className='cartModal__text'>
             <ProductDescription className='isInsideCart' />
+            <div>
+              <p className='cartModal__size'>Tamanho: G</p>
+            </div>
             <SelectUnit />
             <button className='cartModal__removeItemBtn'>Remover Produto</button>
           </div>
@@ -35,6 +38,20 @@ const CartModal = ({ activeCart, setActiveCart }) => {
           <Image className='product__cart' src={ProductPhoto} />
           <div className='cartModal__text'>
             <ProductDescription className='isInsideCart' />
+            <div>
+              <p>Tamanho: G</p>
+            </div>
+            <SelectUnit />
+            <button className='cartModal__removeItemBtn'>Remover Produto</button>
+          </div>
+        </div>
+        <div className='cartModal__item'>
+          <Image className='product__cart' src={ProductPhoto} />
+          <div className='cartModal__text'>
+            <ProductDescription className='isInsideCart' />
+            <div>
+              <p>Tamanho: G</p>
+            </div>
             <SelectUnit />
             <button className='cartModal__removeItemBtn'>Remover Produto</button>
           </div>

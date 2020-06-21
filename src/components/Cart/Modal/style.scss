@@ -53,6 +53,12 @@
   &__text {
     width: 51%;
   }
+
+  &__size {
+    font-size: 0.875em;
+    line-height: 1em;
+    color: $primary-light;
+  }
   
   &__removeItemBtn {
     font-size: 100%;

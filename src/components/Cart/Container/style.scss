@@ -68,4 +68,11 @@
       width: 100%;
     }
   }
+
+  &__subtotal {
+    padding: 0.5em 0.25rem;
+    margin:  0 0.5em 1rem;
+    width: 95%;
+    background-color: $ghost;
+  }
 }
