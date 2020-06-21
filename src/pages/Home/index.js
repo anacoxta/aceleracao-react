@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../defaultStyles.scss';
+import './style.scss';
+
+import Image from '../../components/Image';
+import ProductCatalogDescription from '../../components/ProductCatalogDescription';
 
 import { getCatalog } from '../../services/catalog';
 
@@ -11,8 +15,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='pageContent'>
-      <h1>Home</h1>
+    <div className='pageContent home'>
+      {catalog.map((product, index) => {
+        return (
+          <div className='productContainer'>
+            <Image src={product.image} alt={product.name} />
+            <ProductCatalogDescription
+              name={product.name}
+              regular_price={product.on_sale ? product.regular_price : ''}
+              actual_price={product.actual_price}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };

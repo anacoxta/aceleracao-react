@@ -1,0 +1,11 @@
+.home {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: space-evenly;
+}
+
+.productContainer {
+  margin-bottom: 32px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
