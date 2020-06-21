@@ -69,17 +69,19 @@
   }
 
   &__subtotal {
-    padding: 0.5em 0.25rem;
-    margin:  0 0.5em 1rem;
-    width: 95%;
+    padding: 0.5em 0.25em;
+    margin:  0 0.5em 1em;
     background-color: $ghost;
+    @media (min-width: $md) {
+      margin: 0 2em 1em;
+    }
   }
 
   &__btnGroup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     @media (min-width: $md) {
       justify-content: space-evenly;
     }
