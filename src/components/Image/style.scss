@@ -29,7 +29,8 @@ img {
   }
 
   &__cart {
-    width: 30%;
+    // width: 30%;
+    width: 8.37em;
 
     @include mq-min(md) {
       width: 35%;

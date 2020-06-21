@@ -3,6 +3,8 @@ import React from 'react';
 import './style.scss';
 import ProductDescription from '../../ProductDescription';
 import Image from '../../Image';
+import SelectUnit from '../../SelectUnit';
+import ProductPhoto from '../../../assets/product.png'
 
 const CartModal = ({ activeCart, setActiveCart }) => {
   return (
@@ -22,23 +24,19 @@ const CartModal = ({ activeCart, setActiveCart }) => {
       </header>
       <main className='cartModal__container'>
         <div className='cartModal__item'>
-          <Image />
-          <div>
-            <ProductDescription />
-            {/* <FakeSelect /> */}
-            <button className='cartModal__removeItemBtn'>
-              Remover Produto
-            </button>
+          <Image className='product__cart' src={ProductPhoto} />
+          <div className='cartModal__text'>
+            <ProductDescription className='isInsideCart' />
+            <SelectUnit />
+            <button className='cartModal__removeItemBtn'>Remover Produto</button>
           </div>
         </div>
         <div className='cartModal__item'>
-          <Image />
-          <div>
-            <ProductDescription />
-            {/* <FakeSelect /> */}
-            <button className='cartModal__removeItemBtn'>
-              Remover Produto
-            </button>
+          <Image className='product__cart' src={ProductPhoto} />
+          <div className='cartModal__text'>
+            <ProductDescription className='isInsideCart' />
+            <SelectUnit />
+            <button className='cartModal__removeItemBtn'>Remover Produto</button>
           </div>
         </div>
       </main>

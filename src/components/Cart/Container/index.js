@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.scss';
 
+import CartModal from '../Modal';
 import ButtonCta from '../../ButtonCta';
 import { handleKeepBuyingBtn, handlePaymentBtn } from '../../../utils/buttonFunctions';
 
-import CartModal from '../Modal/CartModal';
 
 const CartContainer = ({ activeCart, setActiveCart }) => {
   return (
