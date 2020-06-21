@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 import ButtonCta from '../ButtonCta';
-import ProductDescription from '../ProductDescription';
+import ProductCartDescription from '../ProductCartDescription';
 import SizeSelect from '../SizeSelect';
 
 import { handleBagBtn } from '../../../utils/buttonFunctions';
@@ -10,7 +10,7 @@ import { handleBagBtn } from '../../../utils/buttonFunctions';
 const ProductInfo = () => {
   return (
     <div className='productInfo'>
-      <ProductDescription />
+      <ProductCartDescription />
       <SizeSelect />
       <ButtonCta
         text='Adicionar à sacola de compras'
