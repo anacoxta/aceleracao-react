@@ -1,63 +1,72 @@
-@import "src/base-styles/dependencies";
+@import 'src/base-styles/dependencies';
 
-@media (max-width: $md) {
-  .cart__container {
-    height: 190%;
-    left: 0;
-    position: fixed;
-    visibility: hidden;
-    width: 100%;
+.cart__container {
+  position: fixed;
+  right: 0;
+  visibility: hidden;
+  width: 100%;
 
-    &.cart__container--display {
-      background-color: $shadow;
-      visibility: visible;
-    }
-
-    .cart__container--active {
-      background-color: $white;
-      height: 94%;
-      position: fixed;
-      right: 3vh;
-      top: 3vh;
-      visibility: visible;
-      width: 90%;
-    }
+  &--display {
+    background-color: $shadow;
+    bottom: 0;
+    height: 100%;
+    visibility: visible;
   }
-}
 
-@media (min-width: $md) {
-  .cart__container {
-    height: 90vh;
+  &--active {
+    background-color: $white;
+    height: 100%;
+    max-width: 400px;
+    opacity: 1;
+    padding-top: 11px;
     position: fixed;
     right: 0;
-    top: calc(23% - 72px);
+    top: 0;
     transition: width 0.5s linear;
-    visibility: hidden;
-    width: 0;
+    visibility: visible;
+    width: 40%;
+    z-index: 105;
 
     -webkit-transition: width 0.5s linear;
     -moz-transition: width 0.5s linear;
     -ms-transition: width 0.5s linear;
     -o-transition: width 0.5s linear;
 
-    &.cart__container--display {
-      display: flex;
-      justify-content: flex-end;
-      visibility: visible;
-      width: 100%;
+    @media (max-width: $sm) {
+      height: 92%;
+      right: 4vh;
+      top: 3vh;
+      width: 90%;
     }
 
-    .cart__container--active {
-      background-color: $white;
-      width: 50%;
+    @media (max-width: $xs) {
+      right: 3.1vh;
     }
   }
-}
 
-@media (min-width: $lg) {
-  .cart__container {
-    .cart__container--active {
-      width: 37.5em;
+  &__button {
+    background: transparent;
+    border: none;
+    color: $color-icon;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  &__btnGroup {
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0 25px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 15px 0 10px;
+      right: unset;
+      width: 100%;
     }
   }
 }

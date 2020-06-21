@@ -1,0 +1,33 @@
+@import 'src/base-styles/dependencies';
+
+.buttonCta {
+  cursor: pointer;
+  font-family: $title-display-Regular;
+  font-size: 13px;
+  font-weight: bold;
+  height: 6vh;
+  text-transform: uppercase;
+  width: 45%;
+
+  @media (max-width: $lg) {
+    height: 8vh;
+  }
+
+  @media (max-width: $sm) {
+    height: 30px;
+    margin-bottom: 5px;
+    width: 90%;
+  }
+
+  &--default {
+    border-color: $secondary-dark;
+    background-color: $white;
+    color: $secondary-dark;
+  }
+
+  &--filled {
+    border-color: $secondary-dark;
+    background-color: $secondary-dark;
+    color: $white;
+  }
+}

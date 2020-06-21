@@ -1,0 +1,39 @@
+@import 'src/base-styles/dependencies';
+
+.containerUnit {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.buttonUnit {
+  width: 18px;
+  height: 20px;
+  border: none;
+  font-weight: bold;
+  color: $secondary;
+  background-color: $primary-lighter;
+  padding: 0px 5px 1px;
+  cursor: pointer;
+
+  &__fontSize--minus {
+    font-size: 18px;
+  }
+
+  &__fontSize--plus {
+    font-size: 15px;
+  }
+
+}
+
+.unitNumber {
+  font-weight: bold;
+}
+
+.unitMessage {
+  width: 150px;
+  font-size: 9px;
+  color: #ff2020;
+  margin: 8px 0px 0px -50px;
+}
