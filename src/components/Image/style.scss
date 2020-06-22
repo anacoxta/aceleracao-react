@@ -58,4 +58,13 @@ img {
     right: 0;
     width: 100%;
   }
+
+  &--empty {
+    background-color: $ghost;
+    color: $color-icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+  }
 }

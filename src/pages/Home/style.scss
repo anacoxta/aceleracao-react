@@ -3,6 +3,9 @@
 a {
   color: $card-description-default;
   text-decoration: none;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  height: 100%;
 }
 
 .home {
@@ -17,7 +20,7 @@ a {
 }
 
 .productContainer {
-  margin-bottom: 32px;
+  height: 100%;
   position: relative;
 
   @include mq-min(md) {
