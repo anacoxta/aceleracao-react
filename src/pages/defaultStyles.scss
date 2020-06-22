@@ -14,4 +14,8 @@
     padding: 3rem 4rem;
     min-height: calc(90vh - 10.5rem);
   }
+
+  @include mq-max(md) {
+    margin: 13vh 0 4.5rem 0;
+  }
 }
