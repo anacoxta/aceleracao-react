@@ -19,12 +19,18 @@ const Home = () => {
       {catalog.map((product, index) => {
         return (
           <div className='productContainer'>
-            <Image src={product.image} alt={product.name} />
-            <ProductCatalogDescription
-              name={product.name}
-              regular_price={product.on_sale ? product.regular_price : ''}
-              actual_price={product.actual_price}
-            />
+            <a href={`product/${product.code_color}`}>
+              <Image
+                src={product.image}
+                alt={product.name}
+                discount={product.discount_percentage}
+              />
+              <ProductCatalogDescription
+                name={product.name}
+                regular_price={product.on_sale ? product.regular_price : ''}
+                actual_price={product.actual_price}
+              />
+            </a>
           </div>
         );
       })}
