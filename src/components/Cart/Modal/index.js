@@ -39,7 +39,7 @@ const CartModal = ({ activeCart, setActiveCart }) => {
           <div className='cartModal__text'>
             <ProductDescription className='isInsideCart' />
             <div>
-              <p>Tamanho: G</p>
+              <p className='cartModal__size'>Tamanho: G</p>
             </div>
             <SelectUnit />
             <button className='cartModal__removeItemBtn'>Remover Produto</button>
@@ -50,7 +50,7 @@ const CartModal = ({ activeCart, setActiveCart }) => {
           <div className='cartModal__text'>
             <ProductDescription className='isInsideCart' />
             <div>
-              <p>Tamanho: G</p>
+              <p className='cartModal__size'>Tamanho: G</p>
             </div>
             <SelectUnit />
             <button className='cartModal__removeItemBtn'>Remover Produto</button>

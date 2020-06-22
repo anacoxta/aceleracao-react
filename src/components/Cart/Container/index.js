@@ -18,7 +18,7 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
         <div className='cart__container__group'>
           <div className='cart__container__subtotal'>
             <span>Subtotal</span>
-            <span>R$ 249,90</span>
+            <span className='cart__container__subtotalPrice'>R$ 249,90</span>
           </div>
           <div className='cart__container__btnGroup'>
             <ButtonCta

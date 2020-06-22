@@ -75,6 +75,9 @@
     @media (min-width: $md) {
       margin: 0 2em 1em;
     }
+    &Price {
+      margin-left: 0.5em;
+    }
   }
 
   &__btnGroup {
