@@ -2,10 +2,11 @@ import React from 'react';
 
 import './style.scss';
 
-const Image = ({ className, src, alt }) => {
+const Image = ({ className, src, alt, discount }) => {
   return (
-    <figure className={className}>
-      <img src={src} alt={alt}/>
+    <figure className='productImage'>
+      {discount !== '' && <span className='productImage__badge'>{discount} OFF</span>}
+      <img src={src} alt={`Produto ${alt}`} title={alt} />
     </figure>
   );
 };

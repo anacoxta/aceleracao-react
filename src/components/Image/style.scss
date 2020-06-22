@@ -6,37 +6,56 @@ figure {
 
 img {
   max-width: 100%;
-  cursor: pointer;
 }
 
-.product {
-  &__navegation {
-    width: 40%;
+// .product {
+//   &__navegation {
+//     width: 40%;
 
-    @include mq-min(md) {
-      width: 26%;
-    }
+//     @include mq-min(md) {
+//       width: 26%;
+//     }
 
-    @include mq-min(xl) {
-      width: 21%;
-    }
-  }
+//     @include mq-min(xl) {
+//       width: 21%;
+//     }
+//   }
 
-  &__detail {
-    width: 100%;
+//   &__detail {
+//     width: 100%;
+//     position: absolute;
+//     top: 60px;
+//   }
+
+//   &__cart {
+//     width: 30%;
+
+//     @include mq-min(md) {
+//       width: 35%;
+//     }
+
+//     @include mq-min(xl) {
+//       width: 40%;
+//     }
+//   }
+// }
+
+.productImage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &__badge {
+    background-color: $translucid-purple;
+    bottom: 0;
+    box-sizing: border-box;
+    color: $white;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.3rem;
     position: absolute;
-    top: 60px;
-  }
-
-  &__cart {
-    width: 30%;
-
-    @include mq-min(md) {
-      width: 35%;
-    }
-
-    @include mq-min(xl) {
-      width: 40%;
-    }
+    right: 0;
+    width: 100%;
   }
 }
