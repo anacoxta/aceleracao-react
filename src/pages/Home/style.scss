@@ -1,15 +1,13 @@
 @import 'src/base-styles/dependencies';
 
-a {
+.productContainer__link {
   color: $card-description-default;
   text-decoration: none;
-  display: grid;
-  grid-template-rows: 70% 30%;
-  height: 100%;
 }
 
 .home {
   display: grid;
+  grid-row-gap: 20px;
   grid-template-columns: 20% 20% 20% 20%;
   justify-content: space-evenly;
 

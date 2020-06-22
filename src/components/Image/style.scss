@@ -60,11 +60,10 @@ img {
   }
 
   &--empty {
-    background-color: $ghost;
-    color: $color-icon;
+    align-items: center;
+    color: $ghost;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: 60px;
   }
 }

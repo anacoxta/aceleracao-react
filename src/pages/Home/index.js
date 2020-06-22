@@ -19,7 +19,7 @@ const Home = () => {
       {catalog.map((product, index) => {
         return (
           <div className='productContainer'>
-            <a href={`product/${product.code_color}`}>
+            <a href={`product/${product.code_color}`} className='productContainer__link'>
               <Image
                 src={product.image}
                 alt={product.name}
