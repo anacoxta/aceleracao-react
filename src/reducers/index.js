@@ -25,20 +25,18 @@ export const cartReducer = (state = initialState, action) => {
     case REMOVE_PRODUCT:
       return {
         ...state,
-        precoTotal: state.precoTotal - action.newProduct.quantRemovida * action.newProduct.preco,
-        quantTotal: state.quantTotal - action.newProduct.quantRemovida,
-        products: [
-          state.products.map((product) => {
-            if (product.id === action.newProduct.id) {
-              return {
-                ...product,
-                quantidade: product.quantidade - action.newProduct.quantRemovida,
-              };
-            }
+        precoTotal: state.precoTotal - action.deletedProduct.amount * action.deletedProduct.price,
+        quantTotal: state.quantTotal - action.deletedProduct.amount,
+        products: state.products.map((product) => {
+          if (product.id === action.deletedProduct.id) {
+            return {
+              ...product,
+              amount: product.amount - action.deletedProduct.amount,
+            };
+          }
 
-            return product;
-          }),
-        ],
+          return product;
+        }),
       };
     default:
       return state;

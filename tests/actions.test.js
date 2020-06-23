@@ -1,4 +1,4 @@
-import * as actions from './src/actions';
+import * as actions from '../src/actions';
 
 const product = {
   id: 1,
