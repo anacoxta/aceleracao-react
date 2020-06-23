@@ -1,9 +1,9 @@
 @import 'src/base-styles/dependencies';
 
 .containerUnit {
-  width: 72px;
+  width: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 15px 0;
 }
 

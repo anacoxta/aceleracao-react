@@ -1,10 +1,8 @@
 import React from 'react';
 import './style.scss';
 
-import CartModal from '../Modal';
 import ButtonCta from '../../ButtonCta';
 import { handleKeepBuyingBtn, handlePaymentBtn } from '../../../utils/buttonFunctions';
-
 
 const CartContainer = ({ activeCart, setActiveCart }) => {
   return (
@@ -14,20 +12,21 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
         role='dialog'
         aria-label='Carrinho de compras'
       >
-        <CartModal activeCart={activeCart} setActiveCart={setActiveCart} />
-        <div className='cart__container__group'>
-          <div className='cart__container__subtotal'>
-            <span>Subtotal</span>
-            <span className='cart__container__subtotalPrice'>R$ 249,90</span>
-          </div>
-          <div className='cart__container__btnGroup'>
-            <ButtonCta
-              text='Continuar comprando'
-              layout='default'
-              handleClick={handleKeepBuyingBtn}
-            />
-            <ButtonCta text='Finalizar pagamento' layout='filled' handleClick={handlePaymentBtn} />
-          </div>
+        <button
+          className='cart__container__button'
+          aria-label='Fechar carrinho de compras'
+          onClick={() => setActiveCart(!activeCart)}
+        >
+          <i className='fas fa-times-circle'></i>
+        </button>
+
+        <div className='cart__container__btnGroup'>
+          <ButtonCta
+            text='Continuar comprando'
+            layout='default'
+            handleClick={handleKeepBuyingBtn}
+          />
+          <ButtonCta text='Finalizar pagamento' layout='filled' handleClick={handlePaymentBtn} />
         </div>
       </div>
     </div>
