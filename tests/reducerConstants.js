@@ -68,6 +68,19 @@ const addResult2 = {
   ],
 };
 
+const removeResult = {
+  totalPrice: 50,
+  totalAmount: 1,
+  products: [
+    {
+      id: 2,
+      amount: 1,
+      price: 50,
+      size: 'P',
+    },
+  ],
+};
+
 const decrementResult = {
   totalPrice: 23,
   totalAmount: 1,
@@ -133,6 +146,7 @@ export {
   incrementAction,
   addResult1,
   addResult2,
+  removeResult,
   decrementResult,
   incrementResult,
 };

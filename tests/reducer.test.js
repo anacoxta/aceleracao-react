@@ -25,4 +25,10 @@ describe('reducer', () => {
       constants.incrementResult
     );
   });
+
+  it('should remove a product from cart', () => {
+    expect(cartReducer(constants.addResult2, constants.removeAction)).toEqual(
+      constants.removeResult
+    );
+  });
 });

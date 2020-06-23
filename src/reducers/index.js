@@ -20,7 +20,7 @@ export const cartReducer = (state = initialState, action) => {
 
       return {
         ...state,
-        totalPrice: state.totalPrice - remove.amount * action.deletedProduct.price,
+        totalPrice: state.totalPrice - remove.amount * remove.price,
         totalAmount: state.totalAmount - remove.amount,
         products: state.products.filter((product) => product.id !== action.deletedProduct.id),
       };
