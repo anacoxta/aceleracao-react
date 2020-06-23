@@ -13,6 +13,13 @@ const newProduct1 = {
   size: 'G',
 };
 
+const newProduct2 = {
+  id: 2,
+  amount: 1,
+  price: 50,
+  size: 'P',
+};
+
 const deletedProduct = {
   id: 1,
 };
@@ -38,6 +45,25 @@ const addResult1 = {
       amount: 2,
       price: 23,
       size: 'G',
+    },
+  ],
+};
+
+const addResult2 = {
+  totalPrice: 96,
+  totalAmount: 3,
+  products: [
+    {
+      id: 1,
+      amount: 2,
+      price: 23,
+      size: 'G',
+    },
+    {
+      id: 2,
+      amount: 1,
+      price: 50,
+      size: 'P',
     },
   ],
 };
@@ -73,6 +99,11 @@ const addAction1 = {
   newProduct: newProduct1,
 };
 
+const addAction2 = {
+  type: types.ADD_PRODUCT,
+  newProduct: newProduct2,
+};
+
 const removeAction = {
   type: types.REMOVE_PRODUCT,
   deletedProduct,
@@ -91,14 +122,17 @@ const incrementAction = {
 export {
   initialState,
   newProduct1,
+  newProduct2,
   deletedProduct,
   decrementProduct,
   incrementProduct,
   addAction1,
+  addAction2,
   removeAction,
   decrementAction,
   incrementAction,
   addResult1,
+  addResult2,
   decrementResult,
   incrementResult,
 };

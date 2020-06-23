@@ -10,6 +10,10 @@ describe('reducer', () => {
     expect(cartReducer(constants.initialState, constants.addAction1)).toEqual(constants.addResult1);
   });
 
+  it('should add another product to the cart', () => {
+    expect(cartReducer(constants.addResult1, constants.addAction2)).toEqual(constants.addResult2);
+  });
+
   it('should decrement product amount', () => {
     expect(cartReducer(constants.addResult1, constants.decrementAction)).toEqual(
       constants.decrementResult
