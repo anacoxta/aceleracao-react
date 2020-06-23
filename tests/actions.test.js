@@ -25,4 +25,13 @@ describe('actions', () => {
 
     expect(actions.removeProduct(product)).toEqual(expectedAction);
   });
+
+  it('should create an action to update product amount', () => {
+    const expectedAction = {
+      type: actions.UPDATE_PRODUCT,
+      product,
+    };
+
+    expect(actions.updateProduct(product)).toEqual(expectedAction);
+  });
 });

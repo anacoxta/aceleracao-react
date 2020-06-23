@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, REMOVE_PRODUCT } from '../actions';
+import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT } from '../actions';
 
 const initialState = {
   totalPrice: 0,
@@ -16,15 +16,24 @@ export const cartReducer = (state = initialState, action) => {
         products: [...state.products, action.newProduct],
       };
     case REMOVE_PRODUCT:
+      let remove = state.products.find((product) => product.id === action.deletedProduct.id);
+
       return {
         ...state,
-        totalPrice: state.totalPrice - action.deletedProduct.amount * action.deletedProduct.price,
-        totalAmount: state.totalAmount - action.deletedProduct.amount,
+        totalPrice: state.totalPrice - remove.amount * action.deletedProduct.price,
+        totalAmount: state.totalAmount - remove.amount,
+        products: state.products.filter((product) => product.id !== action.deletedProduct.id),
+      };
+    case UPDATE_PRODUCT:
+      return {
+        ...state,
+        totalPrice: state.totalPrice + action.product.amount * action.product.price,
+        totalAmount: state.totalAmount + action.product.amount,
         products: state.products.map((product) => {
-          if (product.id === action.deletedProduct.id) {
+          if (product.id === action.product.id) {
             return {
               ...product,
-              amount: product.amount - action.deletedProduct.amount,
+              amount: product.amount + action.product.amount,
             };
           }
 

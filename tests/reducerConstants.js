@@ -1,8 +1,8 @@
 import * as types from '../src/actions';
 
 const initialState = {
-  precoTotal: 0,
-  quantTotal: 0,
+  totalPrice: 0,
+  totalAmount: 0,
   products: [],
 };
 
@@ -15,8 +15,38 @@ const newProduct = {
 
 const deletedProduct = {
   id: 1,
-  amount: 1,
+};
+
+const decrementProduct = {
+  id: 1,
+  amount: -1,
   price: 23,
+};
+
+const addResult = {
+  totalPrice: 46,
+  totalAmount: 2,
+  products: [
+    {
+      id: 1,
+      amount: 2,
+      price: 23,
+      size: 'G',
+    },
+  ],
+};
+
+const removeResult = {
+  totalPrice: 23,
+  totalAmount: 1,
+  products: [
+    {
+      id: 1,
+      amount: 1,
+      price: 23,
+      size: 'G',
+    },
+  ],
 };
 
 const addAction = {
@@ -29,38 +59,19 @@ const removeAction = {
   deletedProduct,
 };
 
-const addResult = {
-  precoTotal: 46,
-  quantTotal: 2,
-  products: [
-    {
-      id: 1,
-      amount: 2,
-      price: 23,
-      size: 'G',
-    },
-  ],
-};
-
-const removeResult = {
-  precoTotal: 23,
-  quantTotal: 1,
-  products: [
-    {
-      id: 1,
-      amount: 1,
-      price: 23,
-      size: 'G',
-    },
-  ],
+const decrementAction = {
+  type: types.UPDATE_PRODUCT,
+  product: decrementProduct,
 };
 
 export {
   initialState,
   newProduct,
   deletedProduct,
+  decrementProduct,
   addAction,
   removeAction,
+  decrementAction,
   addResult,
   removeResult,
 };
