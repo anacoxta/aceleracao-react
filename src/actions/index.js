@@ -1,12 +1,12 @@
 export const ADD_PRODUCT = 'ADD_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
-export const addProduct = (product) => ({
+export const addProduct = (newProduct) => ({
   type: ADD_PRODUCT,
-  newProduct: product,
+  newProduct,
 });
 
-export const removeProduct = (product) => ({
+export const removeProduct = (deletedProduct) => ({
   type: REMOVE_PRODUCT,
-  newProduct: product,
+  deletedProduct,
 });
