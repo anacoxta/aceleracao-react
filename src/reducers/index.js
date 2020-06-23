@@ -16,28 +16,29 @@ const initialState = {
 export const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PRODUCT:
-      let index = state.products.findIndex((product) => product.id === action.newProduct.id);
-
-      if (index !== -1) {
-        state.products[index] = { ...action.newProduct };
-      } else {
-        state.products.push(action.newProduct);
-      }
-
-      state.quantTotal += action.newProduct.quantAdicionada;
-      state.precoTotal += action.newProduct.quantAdicionada * action.newProduct.preco;
-
       return {
         ...state,
-        newValue: action.newValue,
+        precoTotal: state.precoTotal + action.newProduct.amount * action.newProduct.price,
+        quantTotal: state.quantTotal + action.newProduct.amount,
+        products: [...state.products, action.newProduct],
       };
     case REMOVE_PRODUCT:
-      // state.find(id);
-      // se achar, faz update
-      // se não achar, state.push({})
       return {
         ...state,
-        newValue: action.newValue,
+        precoTotal: state.precoTotal - action.newProduct.quantRemovida * action.newProduct.preco,
+        quantTotal: state.quantTotal - action.newProduct.quantRemovida,
+        products: [
+          state.products.map((product) => {
+            if (product.id === action.newProduct.id) {
+              return {
+                ...product,
+                quantidade: product.quantidade - action.newProduct.quantRemovida,
+              };
+            }
+
+            return product;
+          }),
+        ],
       };
     default:
       return state;
