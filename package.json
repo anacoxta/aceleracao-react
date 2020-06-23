@@ -16,7 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,7 +46,9 @@
     ]
   },
   "devDependencies": {
+    "babel-jest": "^26.1.0",
     "browser-sync": "^2.26.7",
+    "jest": "^26.1.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5"
   }
