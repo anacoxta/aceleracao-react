@@ -6,7 +6,7 @@ const initialState = {
   products: [],
 };
 
-const newProduct = {
+const newProduct1 = {
   id: 1,
   amount: 2,
   price: 23,
@@ -23,7 +23,13 @@ const decrementProduct = {
   price: 23,
 };
 
-const addResult = {
+const incrementProduct = {
+  id: 1,
+  amount: 1,
+  price: 23,
+};
+
+const addResult1 = {
   totalPrice: 46,
   totalAmount: 2,
   products: [
@@ -36,7 +42,7 @@ const addResult = {
   ],
 };
 
-const removeResult = {
+const decrementResult = {
   totalPrice: 23,
   totalAmount: 1,
   products: [
@@ -49,9 +55,22 @@ const removeResult = {
   ],
 };
 
-const addAction = {
+const incrementResult = {
+  totalPrice: 69,
+  totalAmount: 3,
+  products: [
+    {
+      id: 1,
+      amount: 3,
+      price: 23,
+      size: 'G',
+    },
+  ],
+};
+
+const addAction1 = {
   type: types.ADD_PRODUCT,
-  newProduct,
+  newProduct: newProduct1,
 };
 
 const removeAction = {
@@ -64,14 +83,22 @@ const decrementAction = {
   product: decrementProduct,
 };
 
+const incrementAction = {
+  type: types.UPDATE_PRODUCT,
+  product: incrementProduct,
+};
+
 export {
   initialState,
-  newProduct,
+  newProduct1,
   deletedProduct,
   decrementProduct,
-  addAction,
+  incrementProduct,
+  addAction1,
   removeAction,
   decrementAction,
-  addResult,
-  removeResult,
+  incrementAction,
+  addResult1,
+  decrementResult,
+  incrementResult,
 };

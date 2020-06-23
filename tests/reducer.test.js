@@ -7,12 +7,18 @@ describe('reducer', () => {
   });
 
   it('should add a product to the initial state', () => {
-    expect(cartReducer(constants.initialState, constants.addAction)).toEqual(constants.addResult);
+    expect(cartReducer(constants.initialState, constants.addAction1)).toEqual(constants.addResult1);
   });
 
   it('should decrement product amount', () => {
-    expect(cartReducer(constants.addResult, constants.decrementAction)).toEqual(
-      constants.removeResult
+    expect(cartReducer(constants.addResult1, constants.decrementAction)).toEqual(
+      constants.decrementResult
+    );
+  });
+
+  it('should increment product amount', () => {
+    expect(cartReducer(constants.addResult1, constants.incrementAction)).toEqual(
+      constants.incrementResult
     );
   });
 });
