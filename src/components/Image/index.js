@@ -2,10 +2,10 @@ import React from 'react';
 
 import './style.scss';
 
-const Image = ({ className, src, alt }) => {
+const Image = ({ layout, src, alt }) => {
   return (
-    <figure className={className}>
-      <img src={src} alt={alt}/>
+    <figure className={layout}>
+      <img src={src} alt={alt} />
     </figure>
   );
 };

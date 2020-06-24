@@ -4,7 +4,7 @@ import './style.scss';
 import ProductDescription from '../../ProductDescription';
 import Image from '../../Image';
 import SelectUnit from '../../SelectUnit';
-import ProductPhoto from '../../../assets/product.png'
+import ProductPhoto from '../../../assets/product.png';
 
 const CartModal = ({ activeCart, setActiveCart }) => {
   return (
@@ -24,9 +24,9 @@ const CartModal = ({ activeCart, setActiveCart }) => {
       </header>
       <main className='cartModal__container'>
         <div className='cartModal__item'>
-          <Image className='product__cart' src={ProductPhoto} />
+          <Image layout='product__cart' src={ProductPhoto} />
           <div className='cartModal__text'>
-            <ProductDescription className='isInsideCart' />
+            <ProductDescription layout='isInsideCart' />
             <div>
               <p className='cartModal__size'>Tamanho: G</p>
             </div>
@@ -35,9 +35,9 @@ const CartModal = ({ activeCart, setActiveCart }) => {
           </div>
         </div>
         <div className='cartModal__item'>
-          <Image className='product__cart' src={ProductPhoto} />
+          <Image layout='product__cart' src={ProductPhoto} />
           <div className='cartModal__text'>
-            <ProductDescription className='isInsideCart' />
+            <ProductDescription layout='isInsideCart' />
             <div>
               <p className='cartModal__size'>Tamanho: G</p>
             </div>
@@ -46,9 +46,9 @@ const CartModal = ({ activeCart, setActiveCart }) => {
           </div>
         </div>
         <div className='cartModal__item'>
-          <Image className='product__cart' src={ProductPhoto} />
+          <Image layout='product__cart' src={ProductPhoto} />
           <div className='cartModal__text'>
-            <ProductDescription className='isInsideCart' />
+            <ProductDescription layout='isInsideCart' />
             <div>
               <p className='cartModal__size'>Tamanho: G</p>
             </div>
