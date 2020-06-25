@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../defaultStyles.scss';
 
+import CardProduct from '../../components/CardProduct/index'
 import { getCatalog } from '../../services/catalog';
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
 
   return (
     <div className='pageContent'>
-      <h1>Home</h1>
+      <CardProduct />
     </div>
   );
 };
