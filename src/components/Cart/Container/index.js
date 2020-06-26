@@ -1,12 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './style.scss';
-
 import CartModal from '../Modal';
 import ButtonCta from '../../ButtonCta';
 import { handleKeepBuyingBtn, handlePaymentBtn } from '../../../utils/buttonFunctions';
 
-
-const CartContainer = ({ activeCart, setActiveCart }) => {
+const CartContainer = ({ activeCart, setActiveCart, totalPrice }) => {
   return (
     <div className={activeCart ? 'cart__container cart__container--display' : 'cart__container'}>
       <div
@@ -18,7 +17,9 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
         <div className='cart__container__group'>
           <div className='cart__container__subtotal'>
             <span>Subtotal</span>
-            <span className='cart__container__subtotalPrice'>R$ 249,90</span>
+            <span className='cart__container__subtotalPrice'>
+              {totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+            </span>
           </div>
           <div className='cart__container__btnGroup'>
             <ButtonCta
@@ -34,4 +35,8 @@ const CartContainer = ({ activeCart, setActiveCart }) => {
   );
 };
 
-export default CartContainer;
+const mapStateToProps = (store) => ({
+  totalPrice: store.totalPrice,
+});
+
+export default connect(mapStateToProps)(CartContainer);

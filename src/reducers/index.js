@@ -1,9 +1,15 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT } from '../actions';
 
 const initialState = {
-  totalPrice: 0,
-  totalAmount: 0,
-  products: [],
+  totalPrice: 20,
+  totalAmount: 1,
+  products: [
+    {
+      id: 1,
+      price: 20,
+      amount: 1,
+    },
+  ],
 };
 
 export const cartReducer = (state = initialState, action) => {
