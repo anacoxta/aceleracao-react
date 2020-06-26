@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { updateProduct } from '../../../actions';
+import { updateProduct, removeProduct } from '../../../actions';
 import './style.scss';
 import ProductDescription from '../../ProductDescription';
 import Image from '../../Image';
 import SelectUnit from '../../SelectUnit';
 import ProductPhoto from '../../../assets/product.png';
 
-const ProductBox = ({ product, updateProduct }) => {
+const ProductBox = ({ product, updateProduct, removeProduct }) => {
   const [amount, setAmount] = useState(product.amount);
 
   const handleMinusClick = () => {
@@ -54,12 +54,18 @@ const ProductBox = ({ product, updateProduct }) => {
           handleMinusClick={handleMinusClick}
           handlePlusClick={handlePlusClick}
         />
-        <button className='productBox__removeItemBtn'>Remover Produto</button>
+        <button
+          className='productBox__removeItemBtn'
+          onClick={() => removeProduct({ id: product.id })}
+        >
+          Remover Produto
+        </button>
       </div>
     </div>
   );
 };
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ updateProduct }, dispatch);
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators({ updateProduct, removeProduct }, dispatch);
 
 export default connect(null, mapDispatchToProps)(ProductBox);
