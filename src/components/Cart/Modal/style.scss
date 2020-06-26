@@ -1,0 +1,71 @@
+@import "src/base-styles/dependencies";
+
+.cartModal {
+  &__container {
+    padding: 0 0.5em;
+    @include mq-min(md) {
+      padding: 0 2em;
+    }
+  }
+
+  &__header {
+    background-color: $bg-color-secondary;
+    display: flex;
+    justify-content: space-between;
+
+    &Box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 1em;
+      width: 100%;
+      height: 3em;
+    }
+  }
+
+  &__title {
+    font-family: $logo-font;
+    text-transform: uppercase;
+    font-size: 1.37em;
+    line-height: 1.25em;
+    font-weight: 400;
+    padding-top: 0.25em;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    color: $color-icon;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: unset;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    height: 178px;
+    border-bottom: 0.125em solid $border-primary;
+    padding: 0.912em 0;
+
+  }
+
+  &__text {
+    width: 51%;
+  }
+
+  &__size {
+    font-size: 0.875em;
+    line-height: 1em;
+    color: $primary-light;
+  }
+  
+  &__removeItemBtn {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: $warning;
+  }
+}
