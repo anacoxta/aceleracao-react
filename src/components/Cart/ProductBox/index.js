@@ -1,16 +1,45 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { updateProduct } from '../../../actions';
 import './style.scss';
 import ProductDescription from '../../ProductDescription';
 import Image from '../../Image';
 import SelectUnit from '../../SelectUnit';
 import ProductPhoto from '../../../assets/product.png';
 
-const ProductBox = ({ product }) => {
+const ProductBox = ({ product, updateProduct }) => {
   const [amount, setAmount] = useState(product.amount);
 
-  const handleMinusClick = () => (amount !== 0 ? setAmount(amount - 1) : amount);
+  const handleMinusClick = () => {
+    if (amount !== 0) {
+      updateProduct({
+        id: product.id,
+        amount: -1,
+        price: product.price,
+      });
 
-  const handlePlusClick = () => (amount !== 5 ? setAmount(amount + 1) : 5);
+      setAmount(amount - 1);
+      return;
+    }
+
+    setAmount(amount);
+  };
+
+  const handlePlusClick = () => {
+    if (amount !== 5) {
+      updateProduct({
+        id: product.id,
+        amount: 1,
+        price: product.price,
+      });
+
+      setAmount(amount + 1);
+      return;
+    }
+
+    setAmount(5);
+  };
 
   return (
     <div className='productBox'>
@@ -31,4 +60,6 @@ const ProductBox = ({ product }) => {
   );
 };
 
-export default ProductBox;
+const mapDispatchToProps = (dispatch) => bindActionCreators({ updateProduct }, dispatch);
+
+export default connect(null, mapDispatchToProps)(ProductBox);
