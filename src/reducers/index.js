@@ -1,13 +1,24 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT } from '../actions';
 
 const initialState = {
-  totalPrice: 20,
-  totalAmount: 1,
+  totalPrice: 170,
+  totalAmount: 4,
   products: [
     {
-      id: 1,
+      id: '20002605_613',
+      name: 'Produto 1',
+      size: 'PP',
       price: 20,
       amount: 1,
+      installments: '3x R$ 66,63',
+    },
+    {
+      id: '20002605_614',
+      name: 'Produto 2',
+      size: 'G',
+      price: 50,
+      amount: 3,
+      installments: '3x R$ 66,63',
     },
   ],
 };
