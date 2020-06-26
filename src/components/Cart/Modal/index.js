@@ -1,12 +1,9 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import './style.scss';
-import ProductDescription from '../../ProductDescription';
-import Image from '../../Image';
-import SelectUnit from '../../SelectUnit';
-import ProductPhoto from '../../../assets/product.png'
+import ProductBox from '../ProductBox';
 
-const CartModal = ({ activeCart, setActiveCart }) => {
+const CartModal = ({ activeCart, setActiveCart, cartAmount, products }) => {
   return (
     <section className='cartModal'>
       <header className='cartModal__header cartModal__container'>
@@ -19,46 +16,23 @@ const CartModal = ({ activeCart, setActiveCart }) => {
         </button>
         <div className='cartModal__headerBox'>
           <h2 className='cartModal__title'>Sacola</h2>
-          <span className='cartModal__totalItems'>5 itens</span>
+          <span className='cartModal__totalItems'>
+            {cartAmount} {cartAmount > 1 ? 'itens' : 'item'}
+          </span>
         </div>
       </header>
       <main className='cartModal__container'>
-        <div className='cartModal__item'>
-          <Image className='product__cart' src={ProductPhoto} />
-          <div className='cartModal__text'>
-            <ProductDescription className='isInsideCart' />
-            <div>
-              <p className='cartModal__size'>Tamanho: G</p>
-            </div>
-            <SelectUnit />
-            <button className='cartModal__removeItemBtn'>Remover Produto</button>
-          </div>
-        </div>
-        <div className='cartModal__item'>
-          <Image className='product__cart' src={ProductPhoto} />
-          <div className='cartModal__text'>
-            <ProductDescription className='isInsideCart' />
-            <div>
-              <p className='cartModal__size'>Tamanho: G</p>
-            </div>
-            <SelectUnit />
-            <button className='cartModal__removeItemBtn'>Remover Produto</button>
-          </div>
-        </div>
-        <div className='cartModal__item'>
-          <Image className='product__cart' src={ProductPhoto} />
-          <div className='cartModal__text'>
-            <ProductDescription className='isInsideCart' />
-            <div>
-              <p className='cartModal__size'>Tamanho: G</p>
-            </div>
-            <SelectUnit />
-            <button className='cartModal__removeItemBtn'>Remover Produto</button>
-          </div>
-        </div>
+        {products.map((product) => (
+          <ProductBox key={product.id} product={product} />
+        ))}
       </main>
     </section>
   );
 };
 
-export default CartModal;
+const mapStateToProps = (store) => ({
+  cartAmount: store.totalAmount,
+  products: store.products,
+});
+
+export default connect(mapStateToProps)(CartModal);
