@@ -1,13 +1,14 @@
 import React from 'react';
 import Image from '../Image'
 import ProductDescription from '../ProductDescription'
+import { Link } from 'react-router-dom'
 
 import './style.scss';
 
-const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, actualPrice, onSale }) => {
+const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, actualPrice, onSale, productId }) => {
 
   return (
-    <div className='cardProductDefault__inner' tabIndex="0">
+    <Link to={`/product/${productId}`} className='cardProductDefault__inner' tabIndex="0">
       <Image
         src={src}
         alt={alt}
@@ -20,7 +21,7 @@ const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, a
         actualPrice={actualPrice}
         onSale={onSale}
       />
-    </div>
+    </Link>
   );
 };
 
