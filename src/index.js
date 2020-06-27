@@ -5,12 +5,16 @@ import './index.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Routes from './routes';
+import { Provider } from 'react-redux';
+import { Store } from './store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Routes />
-    <Footer />
+    <Provider store={Store}>
+      <Header />
+      <Routes />
+      <Footer />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

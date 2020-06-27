@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addProduct } from '../../actions';
 import './style.scss';
 
 import ButtonCta from '../ButtonCta';
 import ProductDescription from '../ProductDescription';
 import SizeSelect from '../SizeSelect';
 
-import { handleBagBtn } from '../../../utils/buttonFunctions';
+const product = {
+  id: '20002605_613',
+  name: 'Produto 1',
+  size: 'PP',
+  price: 20,
+  amount: 1,
+  installments: '3x R$ 66,63',
+};
 
-const ProductInfo = () => {
+const ProductInfo = ({ addProduct }) => {
+  const [selectedSize, setSelectecSize] = useState('');
+
+  const handleSizeSelection = (event) => {
+    setSelectecSize(event.target.name);
+  };
+
   return (
     <div className='productInfo'>
-      <ProductDescription />
-      <SizeSelect />
+      <ProductDescription {...product} />
+      <SizeSelect selectedSize={selectedSize} handleSizeSelection={handleSizeSelection} />
       <ButtonCta
         text='Adicionar à sacola de compras'
         layout='filled productInfo__buttonCta'
-        handleClick={handleBagBtn}
+        handleClick={() => addProduct({ ...product, size: selectedSize })}
       />
     </div>
   );
 };
 
-export default ProductInfo;
+const mapDispatchToProps = (dispatch) => bindActionCreators({ addProduct }, dispatch);
+
+export default connect(null, mapDispatchToProps)(ProductInfo);

@@ -6,8 +6,4 @@ const handlePaymentBtn = () => {
   alert('Redirecionando para o pagamento!');
 };
 
-const handleBagBtn = () => {
-  alert('Adicionando à sacola!');
-};
-
-export { handleKeepBuyingBtn, handlePaymentBtn, handleBagBtn };
+export { handleKeepBuyingBtn, handlePaymentBtn };
