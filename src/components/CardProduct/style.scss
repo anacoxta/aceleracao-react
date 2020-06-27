@@ -1,18 +1,6 @@
 @import 'src/base-styles/dependencies';
 
-.cardProductList {
-  padding:0px;
-}
-
 .cardProductDefault {
-  position: relative;
-  display: inline-block;
-  background-color:$white;
-  font-family: $title-display-Regular;
-  font-style: normal;
-  font-weight: normal;
-  margin: 14px;
-  width: 41%;
   
    @include mq-min(md) {
       margin: 15px 0px 30px 42px;
@@ -25,88 +13,28 @@
 
   }
 
-  &__info {
-    text-decoration:none;
-  }
-
   &__inner {
-    img {
-      width: 100%;
-      max-height: 360px;
-    }
+    width: 40%;
+    margin-bottom: 32px;
+    // position: relative;
 
-  }
-
-
-  // A classe __inner--pricing deverá ser controlada a partir do componente title description
-  &__inner--pricing {
-    color: $card-description-default;
-
-    h2 {
-      font-weight: normal;
-      margin: 0px;
-      font-size: 14px;
-      line-height: 16px;
-    }
-
-    p {
-      margin: 8px 0px;
-      font-weight:bold;
-      margin-right: 2px;
-      font-size:small;
-    }
-
-    span {
-      color: $card-description-secondary;
-      text-decoration-line: line-through;
-      font-size:small;
-      font-weight: 100;
-    }
-  }
-
-  &__inner--priceDiscount {
-    background: $translucid-purple;
-    height: 10%;
-    color: $white;
-    position: absolute;
-    top: 67%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-     @include mq-min(sm) {
-      top: 76%;
-    }
-
-     @include mq-min(md) {
-        top: 77.8%;
+    @include mq-min(md) {
+      width: 26%;
     }
 
     @include mq-min(xl) {
-      top: 77.4%;
+      width: 21%;
     }
 
-    h3 {
-      font-size:14px;
-      font-weight: normal;
-      margin: auto;
-
-      @include mq-max(xs) {
-      font-size: 0.7rem;
-      }     
+    figure {
+      margin: 0;
+      position: relative;
     }
+
+    img {
+      max-width: 100%;
+      cursor: pointer;
+    }
+
   }
-  
 }
-
-// Classes que dinâmicas, variam de acordo com estado do card
-// Para testar comente/descomente o estilo
-
-// .noDiscount {
-//   display:none;
-// }
-
-// .noRemarcable {
-//   display: none;
-// }

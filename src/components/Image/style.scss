@@ -1,26 +1,11 @@
 @import 'src/base-styles/dependencies';
 
-figure {
-  margin: 0;
-}
-
 img {
   max-width: 100%;
   cursor: pointer;
 }
 
 .product {
-  &__navegation {
-    width: 40%;
-
-    @include mq-min(md) {
-      width: 26%;
-    }
-
-    @include mq-min(xl) {
-      width: 21%;
-    }
-  }
 
   &__detail {
     width: 100%;
@@ -29,15 +14,18 @@ img {
   }
 
   &__cart {
-    // width: 30%;
-    width: 8.37em;
 
-    @include mq-min(md) {
-      width: 35%;
-    }
+    figure {
+      margin: 0;
+      width: 8.37em;
 
-    @include mq-min(xl) {
-      width: 40%;
+      @include mq-min(md) {
+        width: 35%;
+      }
+
+      @include mq-min(xl) {
+        width: 40%;
+      }
     }
   }
 }
