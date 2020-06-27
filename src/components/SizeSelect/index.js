@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
 
-const SizeSelect = () => {
+const SizeSelect = ({ selectedSize, handleSizeSelection }) => {
   const product = {
     sizes: [
       { available: false, size: 'PP', sku: '5807_343_0_PP' },
@@ -10,12 +10,6 @@ const SizeSelect = () => {
       { available: true, size: 'G', sku: '5807_343_0_G' },
       { available: false, size: 'GG', sku: '5807_343_0_GG' },
     ],
-  };
-
-  const [selectedSize, setSelectecSize] = useState('');
-
-  const handleSizeSelection = (event) => {
-    setSelectecSize(event.target.name);
   };
 
   return (

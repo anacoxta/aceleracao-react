@@ -1,0 +1,28 @@
+@import 'src/base-styles/dependencies';
+
+.productBox {
+  display: flex;
+  justify-content: space-between;
+  height: 178px;
+  border-bottom: 0.125em solid $border-primary;
+  padding: 0.912em 0;
+
+  &__text {
+    width: 51%;
+  }
+
+  &__size {
+    font-size: 0.875em;
+    line-height: 1em;
+    color: $primary-light;
+  }
+
+  &__removeItemBtn {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: $warning;
+  }
+}
