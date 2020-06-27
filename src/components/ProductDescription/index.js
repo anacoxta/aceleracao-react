@@ -1,7 +1,8 @@
 import React from 'react';
+import classnames from 'classnames'
 import './style.scss';
 
-const ProductDescription = ({ layout, name, classNameDescription, regularPrice, actualPrice, installments}) => {
+const ProductDescription = ({ layout, name, regularPrice, actualPrice, installments, onSale}) => {
   return (
     <section className={`productDescription ${layout}`}>
       <p className='productDescription__name'>
@@ -9,10 +10,12 @@ const ProductDescription = ({ layout, name, classNameDescription, regularPrice, 
       </p>
       <div className='productDescription__pricingGroup'>
         <div className='productDescription__actual'>
-          <span className='productDescription__price--actual'>
-            {actualPrice}{' '}
-          </span>
-          <span className={classNameDescription}>
+          { onSale && (
+            <span className='productDescription__price--actual'>
+              {actualPrice}{' '}
+            </span>
+            )}
+          <span className={classnames({'price--line' : onSale})}>
             {regularPrice}
           </span>
           <span className='productDescription__installments'>
