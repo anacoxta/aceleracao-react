@@ -37,8 +37,8 @@ const ProductBox = ({ product, updateProduct, removeProduct }) => {
   };
 
   return (
-    <div className='productBox'>
-      <Image className='product__cart' src={ProductPhoto} />
+    <div className='productBox product__cart'>
+      <Image src={ProductPhoto} />
       <div className='productBox__text'>
         <ProductDescription layout='isInsideCart' {...product} />
         <div>

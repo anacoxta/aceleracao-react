@@ -1,0 +1,26 @@
+@import 'src/base-styles/dependencies';
+
+.discount {
+  width: 100%;
+  height: 10%;
+  font-size: 12px;
+  font-weight: 600;
+  color: $white;
+  background: $translucid-purple;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  &--none {
+    display: none;
+  }
+}
+
+.price--line {
+  text-decoration: line-through;
+  color: $primary-lighter;
+}

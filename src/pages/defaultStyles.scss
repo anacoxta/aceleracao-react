@@ -1,13 +1,12 @@
 @import 'src/base-styles/dependencies';
 
 .pageContent {
-  align-items: center;
   background-color: $white;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin: 10vh 0 4.5rem 0;
   padding: 1rem;
-  text-align: center;
   min-height: calc(90vh - 6.5rem);
 
   @include mq-min(md) {
