@@ -12,18 +12,16 @@ const ProductBox = ({ product, updateProduct, removeProduct }) => {
   const [amount, setAmount] = useState(product.amount);
 
   const handleMinusClick = () => {
-    if (amount !== 0) {
+    if (amount - 1 > 0) {
       updateProduct({
         id: product.id,
         amount: -1,
         price: product.price,
       });
-
       setAmount(amount - 1);
-      return;
+    } else {
+      removeProduct({ id: product.id });
     }
-
-    setAmount(amount);
   };
 
   const handlePlusClick = () => {
@@ -35,10 +33,7 @@ const ProductBox = ({ product, updateProduct, removeProduct }) => {
       });
 
       setAmount(amount + 1);
-      return;
     }
-
-    setAmount(5);
   };
 
   return (
