@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
-import axios from 'axios'
+import { getCatalog } from '../../services/catalog';
 
-const API = axios.create();
+// const API = axios.create();
 
 
 const CardProduct = () => {
-  const [pageData, setData] = useState([]);
+  const [catalog, setCatalog] = useState([]);
+
+
   useEffect(() => {
-    API.get("https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog")
-      .then(
-        ({ data }) => setData(data)
-      );
-  });
+    getCatalog().then((resp) => setCatalog(resp.data));
+  }, []);
+  console.log(catalog)
+
   return (
     <ul className='cardProductList'>
-      {pageData.map(data => (
+      {catalog.map(data => (
         <li key={data.code_color} className='cardProductDefault' aria-labelledby='product-description'>
           <span id='product-description'></span>
           <a href='#' className='cardProductDefault__info' aria-label='Detalhe do produto'>
@@ -30,8 +31,6 @@ const CardProduct = () => {
                 <p>
                   {data.regular_price} <span className='noRemarcable'>{data.actual_price}</span>
                 </p>
-
-
               </div>
             </div>
           </a>
