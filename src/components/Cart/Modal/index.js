@@ -17,7 +17,11 @@ const CartModal = ({ activeCart, setActiveCart, cartAmount, products }) => {
         <div className='cartModal__headerBox'>
           <h2 className='cartModal__title'>Sacola</h2>
           <span className='cartModal__totalItems'>
-            {cartAmount} {cartAmount > 1 ? 'itens' : 'item'}
+            {cartAmount === 0
+              ? 'Carrinho vazio'
+              : cartAmount > 1
+              ? `${cartAmount} itens`
+              : '1 item'}
           </span>
         </div>
       </header>
