@@ -7,7 +7,7 @@ import './style.scss';
 const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, actualPrice, onSale }) => {
 
   return (
-    <div className='cardProductDefault__inner'>
+    <div className='cardProductDefault__inner' tabIndex="0">
       <Image
         src={src}
         alt={alt}
