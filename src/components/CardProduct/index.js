@@ -4,7 +4,7 @@ import ProductDescription from '../ProductDescription'
 
 import './style.scss';
 
-const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, actualPrice, classNameDescription }) => {
+const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, actualPrice, onSale }) => {
 
   return (
     <div className='cardProductDefault__inner'>
@@ -18,7 +18,7 @@ const CardProduct = ({ src, alt, discountPrice, className, name, regularPrice, a
         name={name}
         regularPrice={regularPrice}
         actualPrice={actualPrice}
-        classNameDescription={classNameDescription}
+        onSale={onSale}
       />
     </div>
   );

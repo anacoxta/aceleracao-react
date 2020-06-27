@@ -27,10 +27,9 @@ const Home = () => {
                 discountPrice={item.discount_percentage !== '' ? `${item.discount_percentage} OFF` : ''}
                 className={item.on_sale ? 'discount' : 'discount--none'}
                 name={item.name}
-                // price={item.discount_percentage !== '' ? `${item.actual_price} ${item.regular_price}` : item.regular_price}
-                classNameDescription={item.on_sale ? 'price--line' : null}
-                actualPrice={item.on_sale ? `${item.actual_price} ${item.regular_price}` : ''}
-                regularPrice={item.on_sale ? '' : item.regular_price}
+                onSale={item.on_sale}
+                actualPrice={item.actual_price}
+                regularPrice={item.regular_price}
               />
             // </Link>
           )
