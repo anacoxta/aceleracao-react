@@ -1,0 +1,12 @@
+@import 'src/base-styles/dependencies';
+
+.pageContentProduct {
+
+  > figure {
+    margin: 24px 0px;
+
+    @include mq-min(xl) {
+      margin: 0;
+    }
+  }
+}
