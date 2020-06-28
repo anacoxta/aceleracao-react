@@ -1,5 +1,9 @@
 @import "src/base-styles/dependencies";
 
+.link {
+  text-decoration: none;
+}
+
 .logo {
   font-family: $logo-font;
   font-size: 1.5rem;
