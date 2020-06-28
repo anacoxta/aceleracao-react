@@ -17,7 +17,7 @@ const product = {
   installments: '3x R$ 66,63',
 };
 
-const ProductInfo = ({ addProduct }) => {
+const ProductInfo = ({ addProduct, layout, name, regularPrice, actualPrice, installments, onSale }) => {
   const [selectedSize, setSelectecSize] = useState('');
 
   const handleSizeSelection = (event) => {
@@ -26,7 +26,14 @@ const ProductInfo = ({ addProduct }) => {
 
   return (
     <div className='productInfo'>
-      <ProductDescription {...product} />
+      <ProductDescription
+        layout={layout}
+        name={name}
+        regularPrice={regularPrice}
+        actualPrice={actualPrice}
+        installments={installments}
+        onSale={onSale}
+      />
       <SizeSelect selectedSize={selectedSize} handleSizeSelection={handleSizeSelection} />
       <ButtonCta
         text='Adicionar à sacola de compras'
