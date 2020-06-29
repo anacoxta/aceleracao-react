@@ -1,4 +1,4 @@
-@import "src/base-styles/dependencies";
+@import 'src/base-styles/dependencies';
 
 #inputSearch {
   align-items: center;
@@ -68,14 +68,14 @@
 
 .productsList {
   background-color: $white;
+  height: 70vh;
   list-style: none;
+  overflow-y: scroll;
   padding: 12px;
   position: absolute;
   top: 35px;
-}
 
-@media (max-width: $md) {
-  .productsList {
+  @media (max-width: $md) {
     left: 0;
     right: 0;
     top: 32px;
