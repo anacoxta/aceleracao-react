@@ -1,10 +1,7 @@
 @import 'src/base-styles/dependencies';
 
-.pageContent {
+.page {
   background-color: $white;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   margin: 10vh 0 4.5rem 0;
   padding: 1rem;
   min-height: calc(90vh - 6.5rem);
@@ -12,5 +9,18 @@
   @include mq-min(md) {
     padding: 3rem 4rem;
     min-height: calc(90vh - 10.5rem);
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
   }
 }
