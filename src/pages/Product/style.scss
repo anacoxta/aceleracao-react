@@ -8,5 +8,9 @@
     @include mq-min(xl) {
       margin: 0;
     }
+
+    > img {
+      cursor: inherit;
+    }
   }
 }
