@@ -35,8 +35,6 @@ const Home = () => {
       );
 
       setCatalog(results);
-    } else {
-      getCatalog().then((resp) => setCatalog(resp.data));
     }
   }, [search]);
 

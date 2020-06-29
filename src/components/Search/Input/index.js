@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './style.scss';
 
 import { getCatalog } from '../../../services/catalog';
 import { withRouter, useHistory, useLocation } from 'react-router-dom';
+
+import Item from '../Item';
 
 const Input = ({ device }) => {
   const history = useHistory();
@@ -12,7 +14,15 @@ const Input = ({ device }) => {
   const [catalog, setCatalog] = useState([]);
 
   useEffect(() => {
-    getCatalog().then((resp) => setCatalog(resp.data));
+    let isCancelled = false;
+
+    if (!isCancelled) {
+      getCatalog().then((resp) => setCatalog(resp.data));
+    }
+
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   const handleChange = (event) => {
@@ -24,7 +34,7 @@ const Input = ({ device }) => {
       setSearchResults([]);
 
       if (searchTerm !== '') {
-        history.push(`?search=${searchTerm}`);
+        history.push(`/?search=${searchTerm}`);
       } else {
         history.push('/');
       }
@@ -47,8 +57,6 @@ const Input = ({ device }) => {
               .replace(/[\u0300-\u036f]/g, '')
           )
       );
-    } else {
-      history.push('/');
     }
 
     setSearchResults(results);
@@ -77,7 +85,7 @@ const Input = ({ device }) => {
       {searchResults.length > 0 && (
         <ul className='productsList'>
           {searchResults.map((item) => (
-            <li key={item.code_color}>{item.name}</li>
+            <Item key={item.code_color} item={item} />
           ))}
         </ul>
       )}

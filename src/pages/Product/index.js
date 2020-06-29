@@ -17,6 +17,7 @@ const Product = () => {
   useEffect(() => {
     getCatalog().then((resp) => setCatalog(resp.data));
   }, []);
+
   const produto = catalog.find((produto) => produto.code_color === productCode);
 
   return (
