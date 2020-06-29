@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import CardProduct from '../../components/CardProduct/index'
+import CardProduct from '../../components/CardProduct/index';
 import { getCatalog } from '../../services/catalog';
 
 import '../defaultStyles.scss';
-import './style.scss'
+import './style.scss';
 
 const Home = () => {
   const [catalog, setCatalog] = useState([]);

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import Image from '../Image'
-import ProductDescription from '../ProductDescription'
+import { Link } from 'react-router-dom';
+import Image from '../Image';
+import ProductDescription from '../ProductDescription';
 
 import './style.scss';
 
