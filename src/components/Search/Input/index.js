@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './style.scss';
 
 import { getCatalog } from '../../../services/catalog';
-import { withRouter, useHistory } from 'react-router-dom';
+import { withRouter, useHistory, useLocation } from 'react-router-dom';
 
 const Input = ({ device }) => {
   const history = useHistory();
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [catalog, setCatalog] = useState([]);
@@ -52,6 +53,12 @@ const Input = ({ device }) => {
 
     setSearchResults(results);
   }, [searchTerm, catalog]);
+
+  useEffect(() => {
+    if (location.search === '') {
+      setSearchTerm('');
+    }
+  }, [location]);
 
   return (
     <div className={`${device}SearchContainer`}>
