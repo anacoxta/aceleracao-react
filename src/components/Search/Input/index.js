@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
 
 import { getCatalog } from '../../../services/catalog';
