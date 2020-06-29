@@ -68,7 +68,6 @@
 
 .productsList {
   background-color: $white;
-  height: 70vh;
   list-style: none;
   overflow-y: scroll;
   padding: 12px;
@@ -78,6 +77,11 @@
   @media (max-width: $md) {
     left: 0;
     right: 0;
-    top: 32px;
+    top: 47px;
+    height: 78vh;
+  }
+
+  @media (min-width: $md) {
+    max-height: 70vh;
   }
 }

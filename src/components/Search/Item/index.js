@@ -4,10 +4,18 @@ import './style.scss';
 
 import Image from '../../Image';
 
-const Item = ({ item }) => {
+const Item = ({ item, device, setMobileSearch }) => {
   return (
     <li key={item.code_color}>
-      <Link className='item' to={`/product/${item.code_color}`}>
+      <Link
+        className='item'
+        to={`/product/${item.code_color}`}
+        onClick={() => {
+          if (device === 'mobile') {
+            setMobileSearch(false);
+          }
+        }}
+      >
         <Image layout='product__search' src={item.image} />
         <span className='infos'>
           <p>{item.name}</p>

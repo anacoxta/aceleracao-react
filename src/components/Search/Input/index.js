@@ -6,7 +6,7 @@ import { withRouter, useHistory, useLocation } from 'react-router-dom';
 
 import Item from '../Item';
 
-const Input = ({ device }) => {
+const Input = ({ device, setMobileSearch }) => {
   const history = useHistory();
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
@@ -34,6 +34,9 @@ const Input = ({ device }) => {
       setSearchResults([]);
 
       if (searchTerm !== '') {
+        if (device === 'mobile') {
+          setMobileSearch(false);
+        }
         history.push(`/?search=${searchTerm}`);
       } else {
         history.push('/');
@@ -85,7 +88,12 @@ const Input = ({ device }) => {
       {searchResults.length > 0 && (
         <ul className='productsList'>
           {searchResults.map((item) => (
-            <Item key={item.code_color} item={item} />
+            <Item
+              key={item.code_color}
+              item={item}
+              device={device}
+              setMobileSearch={setMobileSearch}
+            />
           ))}
         </ul>
       )}
