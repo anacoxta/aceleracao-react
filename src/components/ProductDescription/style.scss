@@ -49,11 +49,6 @@
     }
   }
   &.isInsideCart {
-    // @include mq-min(md) {
-    //   flex-direction: row;
-    //   justify-content: space-between;
-    //   align-items: flex-start;
-    // }
     .productDescription {
       &__actual {
         display: flex;
