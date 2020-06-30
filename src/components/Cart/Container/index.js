@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './style.scss';
 import CartModal from '../Modal';
+
+import './style.scss';
 
 const CartContainer = ({ activeCart, setActiveCart, totalPrice }) => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './style.scss';
 import ProductBox from '../ProductBox';
 import ButtonCta from '../../ButtonCta';
 import { handleKeepBuyingBtn, handlePaymentBtn } from '../../../utils/buttonFunctions';

@@ -1,42 +1,9 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT } from '../actions';
 
 const initialState = {
-  totalPrice: 170,
-  totalAmount: 4,
-  products: [
-    {
-      id: '20002605_613',
-      name: 'Produto 1',
-      size: 'PP',
-      price: 20,
-      amount: 1,
-      installments: '3x R$ 66,63',
-    },
-    {
-      id: '20002605_614',
-      name: 'Produto 2',
-      size: 'P',
-      price: 50,
-      amount: 1,
-      installments: '3x R$ 66,63',
-    },
-    {
-      id: '20002605_615',
-      name: 'Produto 3',
-      size: 'M',
-      price: 50,
-      amount: 1,
-      installments: '3x R$ 66,63',
-    },
-    {
-      id: '20002605_616',
-      name: 'Produto 4',
-      size: 'G',
-      price: 50,
-      amount: 1,
-      installments: '3x R$ 66,63',
-    },
-  ],
+  totalPrice: 0,
+  totalAmount: 0,
+  products: [],
 };
 
 export const cartReducer = (state = initialState, action) => {
