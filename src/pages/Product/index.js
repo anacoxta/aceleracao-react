@@ -25,11 +25,7 @@ const Product = () => {
             alt={produto.name}
           />
           <ProductInfo
-            name={produto.name}
-            regularPrice={produto.regular_price}
-            actualPrice={produto.actual_price}
-            installments={` em até ${produto.installments}`}
-            onSale={produto.on_sale}
+            produto={produto}
           />
         </>}
     </div>
