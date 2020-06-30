@@ -15,9 +15,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='pageContent'>
-      {catalog ? (
-        catalog.map((item) => {
+    <div className='pageContent pageContentHome'>
+      {
+        catalog && catalog.map(item => {
           return (
             <CardProduct
               key={item.code_color}
@@ -27,6 +27,7 @@ const Home = () => {
                 item.discount_percentage !== '' ? `${item.discount_percentage} OFF` : ''
               }
               className={item.on_sale ? 'discount' : 'discount--none'}
+              layout='isInsideHome'
               name={item.name}
               onSale={item.on_sale}
               actualPrice={item.actual_price}

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-import '../defaultStyles.scss';
-import { getCatalog } from '../../services/catalog';
 import Image from '../../components/Image';
-import ProductInfo from '../../components/ProductInfo'
+import ProductInfo from '../../components/ProductInfo';
+import { getCatalog } from '../../services/catalog';
+
+import '../defaultStyles.scss';
+import './style.scss';
 
 const Product = () => {
   const { productCode } = useParams();
@@ -12,10 +14,10 @@ const Product = () => {
   useEffect(() => {
     getCatalog().then(resp => setCatalog(resp.data));
   }, []);
-  const produto = catalog.find(produto => produto.code_color === productCode)
+  const produto = catalog.find(produto => produto.code_color === productCode);
 
   return (
-    <div className='pageContent'>
+    <div className='pageContent pageContentProduct'>
       {produto &&
         <>
           <Image
@@ -23,11 +25,7 @@ const Product = () => {
             alt={produto.name}
           />
           <ProductInfo
-            name={produto.name}
-            regularPrice={produto.regular_price}
-            actualPrice={produto.actual_price}
-            installments={` em até ${produto.installments}`}
-            onSale={produto.on_sale}
+            produto={produto}
           />
         </>}
     </div>
