@@ -44,6 +44,7 @@ const ProductBox = ({ product, updateProduct, removeProduct }) => {
           layout='isInsideCart'
           name={product.name}
           actualPrice={product.actual_price}
+          regularPrice={product.regular_price}
           installments={` em até ${product.installments}`}
           onSale={product.on_sale}
         />
