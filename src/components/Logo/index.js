@@ -1,13 +1,6 @@
 import React from 'react';
-
 import './style.scss';
 
-const Logo = () => {
-  return (
-    <a className='logo' href='/'>
-      Fashionista
-    </a>
-  );
-};
+const Logo = () => <span className='logo'>Fashionista</span>;
 
 export default Logo;

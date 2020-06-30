@@ -1,33 +1,21 @@
 @import 'src/base-styles/dependencies';
 
+// span {
+//   display: inline-block;
+// }
+
+// p {
+//   margin-top: 0;
+// }
+
 .productDescription {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   &.isInsideHome {
-    margin-top: 6px;
-
-    .productDescription {
-
-      &__pricingGroup {
-        display: flex;
-        min-width: 8.4rem;
-        margin-top: 8px;
-
-        @include mq-min(md) {
-          min-width: 2.8rem;
-        }
-      }
-
-      &__name {
-        font-size: 14px;
-
-        @include mq-min(md) {
-          font-size: 16px;
-        }
-      }
+    .productDescription__pricingGroup {
+      display: flex;
     }
   }
   &.isInsideProduct {
@@ -36,12 +24,10 @@
         margin-bottom: 12.2px;
         font-size: 16px;
       }
-
       &__pricingGroup {
         display: flex;
         flex-direction: column;
       }
-
       &__actual {
         margin-bottom: 11px;
         font-size: 16px;
@@ -49,6 +35,11 @@
     }
   }
   &.isInsideCart {
+    // @include mq-min(md) {
+    //   flex-direction: row;
+    //   justify-content: space-between;
+    //   align-items: flex-start;
+    // }
     .productDescription {
       &__actual {
         display: flex;
@@ -56,7 +47,6 @@
         align-items: flex-start;
         margin: 10px 0;
       }
-
       &__price--actual {
         margin-bottom: 11px;
         font-size: 16px;
@@ -69,15 +59,24 @@
     line-height: 16px;
     font-size: 16px;
   }
-
   &__name {
     font-family: $title-display-Regular;
     font-weight: 400;
     margin-bottom: 0.5em;
   }
 
+  &__reg {
+    display: flex;
+    justify-content: flex-start;
+  }
   &__price {
     font-weight: 400;
+    &--reg {
+      text-decoration: line-through;
+      color: $color-icon;
+      display: flex;
+      justify-content: flex-start;
+    }
     &--actual {
       font-weight: 700;
       margin-right: 0.562em;
@@ -85,5 +84,9 @@
   }
   &__installments {
     color: $secondary;
+  }
+  &__discountPercent {
+    color: $color-icon;
+    margin-left: 0.5em;
   }
 }

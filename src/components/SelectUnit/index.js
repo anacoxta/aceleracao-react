@@ -5,7 +5,7 @@ import './style.scss';
 const SelectUnit = ({ amount, handleMinusClick, handlePlusClick }) => {
   return (
     <div className='containerUnit'>
-      <button className='buttonUnit buttonUnit__fontSize--minus' onClick={handleMinusClick} aria-label="remover unidade">
+      <button className='buttonUnit buttonUnit__fontSize--minus' onClick={handleMinusClick}>
         -
       </button>
       {amount === 5 ? (
@@ -14,9 +14,9 @@ const SelectUnit = ({ amount, handleMinusClick, handlePlusClick }) => {
           <p className='unitMessage'>Ops! Quantidade indisponível :(</p>
         </div>
       ) : (
-          <span className='unitNumber'> {amount} </span>
-        )}
-      <button className='buttonUnit buttonUnit__fontSize--plus' onClick={handlePlusClick} aria-label="adicionar unidade">
+        <span className='unitNumber'> {amount} </span>
+      )}
+      <button className='buttonUnit buttonUnit__fontSize--plus' onClick={handlePlusClick}>
         +
       </button>
     </div>

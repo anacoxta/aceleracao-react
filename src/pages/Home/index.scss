@@ -1,9 +1,5 @@
 @import 'src/base-styles/dependencies';
 
-.pageContentHome {
-  padding: 1rem;
-}
-
 .discount {
   width: 100%;
   height: 10%;
@@ -18,10 +14,6 @@
   position: absolute;
   left: 0;
   bottom: 0;
-
-  @include mq-min(xl) {
-    font-size: 14px;
-  }
 
   &--none {
     display: none;
