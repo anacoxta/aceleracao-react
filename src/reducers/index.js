@@ -1,9 +1,9 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT } from '../actions';
 
 const initialState = {
-  totalPrice: 0,
+  totalPrice: 1,
   totalAmount: 0,
-  products: []
+  products: [],
 };
 
 export const cartReducer = (state = initialState, action) => {
@@ -42,5 +42,5 @@ export const cartReducer = (state = initialState, action) => {
       };
     default:
       return state;
-  };
+  }
 };
