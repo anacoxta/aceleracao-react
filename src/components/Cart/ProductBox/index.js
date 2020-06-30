@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { updateProduct, removeProduct } from '../../../actions';
-import './style.scss';
-import ProductDescription from '../../ProductDescription';
 import Image from '../../Image';
 import SelectUnit from '../../SelectUnit';
-import ProductPhoto from '../../../assets/product.png';
+import ProductDescription from '../../ProductDescription';
+
+import './style.scss';
 
 const ProductBox = ({ product, updateProduct, removeProduct }) => {
   const [amount, setAmount] = useState(product.amount);
@@ -38,9 +38,15 @@ const ProductBox = ({ product, updateProduct, removeProduct }) => {
 
   return (
     <div className='productBox product__cart'>
-      <Image src={ProductPhoto} />
+      <Image src={product.image} />
       <div className='productBox__text'>
-        <ProductDescription layout='isInsideCart' {...product} />
+        <ProductDescription
+          layout='isInsideCart'
+          name={product.name}
+          actualPrice={product.actual_price}
+          installments={` em até ${product.installments}`}
+          onSale={product.on_sale}
+        />
         <div>
           <p className='productBox__size'>Tamanho: {product.size}</p>
         </div>
