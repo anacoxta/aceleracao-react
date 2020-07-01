@@ -41,12 +41,58 @@
     padding: unset;
   }
 
+  &__list {
+    overflow-y: scroll;
+    height: 65vh;
+    @media (min-width: $md) {
+      height: 74vh;
+    }
+  }
+
   &__item {
     display: flex;
     justify-content: space-between;
     height: 178px;
     border-bottom: 0.125em solid $border-primary;
     padding: 0.912em 0;
+  }
+
+  &__group {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: $white;
+    padding-bottom: 10px;
+    position: absolute;
+
+    @media (min-width: $md) {
+      right: unset;
+      width: 100%;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__subtotal {
+    padding: 0.5em 0.25em;
+    margin: 0 0.5em 1em;
+    background-color: $ghost;
+    @media (min-width: $md) {
+      margin: 0 2em 1em;
+    }
+    &Price {
+      margin-left: 0.5em;
+    }
+  }
+
+  &__btnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $md) {
+      justify-content: space-evenly;
+    }
   }
 
   &__text {
@@ -58,7 +104,7 @@
     line-height: 1em;
     color: $primary-light;
   }
-  
+
   &__removeItemBtn {
     font-size: 100%;
     font-family: inherit;
