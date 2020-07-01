@@ -3,8 +3,8 @@
 .page {
   background-color: $white;
   margin: 10vh 0 4.5rem 0;
-  padding: 1rem;
   min-height: calc(90vh - 6.5rem);
+  padding: 1rem;
 
   @include mq-min(md) {
     padding: 3rem 4rem;

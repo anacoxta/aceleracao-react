@@ -1,14 +1,15 @@
-@import "src/base-styles/dependencies";
+@import 'src/base-styles/dependencies';
 
 .logo {
+  color: $white;
   font-family: $logo-font;
   font-size: 1.5rem;
   letter-spacing: 0;
+  text-decoration: none;
   text-transform: uppercase;
-  margin-bottom: -.2rem;
-  color: $white;
-  
+  margin-bottom: -0.2rem;
+
   @include mq-min(xs) {
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
   }
 }

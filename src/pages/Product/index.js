@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { getCatalog } from '../../services/catalog';
 
 import '../defaultStyles.scss';
+import './style.scss';
 
 import Image from '../../components/Image';
 import ProductInfo from '../../components/ProductInfo';
@@ -33,13 +34,7 @@ const Product = () => {
         {produto && (
           <>
             <Image src={produto.image} alt={produto.name} />
-            <ProductInfo
-              name={produto.name}
-              regularPrice={produto.regular_price}
-              actualPrice={produto.actual_price}
-              installments={` em até ${produto.installments}`}
-              onSale={produto.on_sale}
-            />
+            <ProductInfo produto={produto} />
           </>
         )}
       </div>

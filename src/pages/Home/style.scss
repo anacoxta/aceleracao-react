@@ -15,6 +15,10 @@
   left: 0;
   bottom: 0;
 
+  @include mq-min(xl) {
+    font-size: 14px;
+  }
+
   &--none {
     display: none;
   }

@@ -3,11 +3,12 @@ import { useHistory } from 'react-router-dom';
 
 import CardProduct from '../../components/CardProduct/index';
 import ButtonCta from '../../components/ButtonCta';
+import Loading from '../../components/Loading';
 import { getCatalog } from '../../services/catalog';
 import { useQuery } from '../../utils/customHooks';
 
 import '../defaultStyles.scss';
-import './index.scss';
+import './style.scss';
 
 const Home = () => {
   const history = useHistory();
@@ -54,7 +55,7 @@ const Home = () => {
       )}
 
       <div className='page__content'>
-        {catalog &&
+        {catalog ? (
           catalog.map((item) => {
             return (
               <CardProduct
@@ -65,6 +66,7 @@ const Home = () => {
                   item.discount_percentage !== '' ? `${item.discount_percentage} OFF` : ''
                 }
                 className={item.on_sale ? 'discount' : 'discount--none'}
+                layout='isInsideHome'
                 name={item.name}
                 onSale={item.on_sale}
                 actualPrice={item.actual_price}
@@ -72,7 +74,10 @@ const Home = () => {
                 productId={item.code_color}
               />
             );
-          })}
+          })
+        ) : (
+          <Loading />
+        )}
       </div>
     </div>
   );
