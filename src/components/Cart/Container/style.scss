@@ -25,7 +25,6 @@
     visibility: visible;
     width: 40%;
     z-index: 105;
-    overflow-y: scroll;
 
     -webkit-transition: width 0.5s linear;
     -moz-transition: width 0.5s linear;
@@ -50,43 +49,5 @@
     color: $color-icon;
     cursor: pointer;
     font-size: 24px;
-  }
-
-  &__group {
-    bottom: 0;
-    padding: 15px 0 25px;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    background-color: $white;
-
-    @media (max-width: $sm) {
-      padding: 15px 0 10px;
-      right: unset;
-      width: 90%;
-      position: fixed;
-    }
-  }
-
-  &__subtotal {
-    padding: 0.5em 0.25em;
-    margin:  0 0.5em 1em;
-    background-color: $ghost;
-    @media (min-width: $md) {
-      margin: 0 2em 1em;
-    }
-    &Price {
-      margin-left: 0.5em;
-    }
-  }
-
-  &__btnGroup {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @media (min-width: $md) {
-      justify-content: space-evenly;
-    }
   }
 }
