@@ -43,7 +43,10 @@
 
   &__list {
     overflow-y: scroll;
-    height: 74vh;
+    height: 65vh;
+    @media (min-width: $md) {
+      height: 74vh;
+    }
   }
 
   &__item {
@@ -55,14 +58,16 @@
   }
 
   &__group {
+    left: 0;
+    right: 0;
     bottom: 0;
+    margin: auto;
     background-color: $white;
     padding-bottom: 10px;
-    right: unset;
-    width: 90%;
     position: absolute;
 
     @media (min-width: $md) {
+      right: unset;
       width: 100%;
       padding-bottom: 25px;
     }
