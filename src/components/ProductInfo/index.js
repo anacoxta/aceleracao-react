@@ -12,10 +12,16 @@ const ProductInfo = ({ addProduct, layout, produto }) => {
   const [selectedSize, setSelectecSize] = useState('');
 
   const priceNumber = produto.actual_price.split(' ');
-  
+
   const handleSizeSelection = (event) => {
     setSelectecSize(event.target.name);
+    isSelected(!event.target.name)
   };
+
+  const isSelected = (selected) => {
+    return selected;
+
+  }
 
   return (
     <div className='productInfo'>
@@ -27,16 +33,17 @@ const ProductInfo = ({ addProduct, layout, produto }) => {
         installments={` em até ${produto.installments}`}
         onSale={produto.on_sale}
       />
-      <SizeSelect selectedSize={selectedSize} handleSizeSelection={handleSizeSelection} />
+      <SizeSelect selectedSize={selectedSize} handleSizeSelection={handleSizeSelection} isSelected={isSelected} />
       <ButtonCta
         text='Adicionar à sacola de compras'
         layout='filled productInfo__buttonCta'
+        isDisabled={isSelected}
         handleClick={() => addProduct({
           ...produto,
-          id: produto.code_color ,
+          id: produto.code_color,
           size: selectedSize,
           price: parseFloat(priceNumber[1].replace(',', '.')),
-          amount: 1, 
+          amount: 1,
         })}
       />
     </div>
