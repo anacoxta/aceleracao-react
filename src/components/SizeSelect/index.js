@@ -13,11 +13,9 @@ const SizeSelect = ({ selectedSize, handleSizeSelection }) => {
   const produto = catalog.find(produto => produto.code_color === productCode);
 
   return (
-
     <section className='sizeSelect'>
       <p className='sizeSelect__title'>Escolha o tamanho</p>
-      {produto &&
-
+      {produto && (
         <div className='sizeSelect__sizeGroup'>
           {produto.sizes.map((product) => (
             <button
@@ -25,17 +23,17 @@ const SizeSelect = ({ selectedSize, handleSizeSelection }) => {
               name={product.size}
               className={`sizeSelect__box sizeSelect__box--${
                 product.available ? 'available' : 'unavailable'
-                }  ${selectedSize === product.size ? 'selected' : ''}`}
-              aria-disabled={!product.available}
+              }  ${selectedSize === product.size && product.available ? 'selected' : ''}`}
+              disabled={!product.available}
               onClick={(event) => {
-                handleSizeSelection(event)
+                handleSizeSelection(event);
               }}
             >
               {product.size}
             </button>
           ))}
         </div>
-      }
+      )}
     </section>
   );
 };
