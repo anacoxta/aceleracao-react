@@ -10,7 +10,11 @@ const Search = () => {
       <button className='mobileSearchBtn' onClick={() => setMobileSearch(!mobileSearch)}>
         <i className='fas fa-search'></i>
       </button>
-      {mobileSearch ? <Input device={'mobile'} /> : <Input device={'desktop'} />}
+      {mobileSearch ? (
+        <Input device={'mobile'} setMobileSearch={setMobileSearch} />
+      ) : (
+        <Input device={'desktop'} />
+      )}
     </>
   );
 };

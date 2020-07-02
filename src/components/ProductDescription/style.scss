@@ -10,7 +10,6 @@
     margin-top: 6px;
 
     .productDescription {
-
       &__pricingGroup {
         display: flex;
         min-width: 8.4rem;
@@ -30,6 +29,7 @@
       }
     }
   }
+
   &.isInsideProduct {
     .productDescription {
       &__name {
@@ -48,6 +48,7 @@
       }
     }
   }
+
   &.isInsideCart {
     .productDescription {
       &__actual {
@@ -63,6 +64,7 @@
       }
     }
   }
+
   &__pricingGroup,
   &__name {
     display: contents;
@@ -76,6 +78,12 @@
     margin-bottom: 0.5em;
   }
 
+  &__reg {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+  }
+
   &__price {
     font-weight: 400;
     &--actual {
@@ -83,6 +91,7 @@
       margin-right: 0.562em;
     }
   }
+
   &__installments {
     color: $secondary;
   }
