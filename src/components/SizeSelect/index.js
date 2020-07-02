@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { getCatalog } from '../../services/catalog';
 import './style.scss';
 
-const SizeSelect = ({ selectedSize, handleSizeSelection, isSelected }) => {
+const SizeSelect = ({ selectedSize, handleSizeSelection }) => {
   const { productCode } = useParams();
   const [catalog, setCatalog] = useState([]);
 
@@ -29,7 +29,6 @@ const SizeSelect = ({ selectedSize, handleSizeSelection, isSelected }) => {
               aria-disabled={!product.available}
               onClick={(event) => {
                 handleSizeSelection(event)
-                isSelected(event)
               }}
             >
               {product.size}
