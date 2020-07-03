@@ -1,0 +1,23 @@
+@import 'src/base-styles/dependencies';
+
+.item {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 1vh;
+}
+
+.infos {
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 2vh;
+}
+
+.price {
+  font-weight: normal;
+  &--special {
+    color: $secondary-light;
+    margin-right: 1vh;
+  }
+}

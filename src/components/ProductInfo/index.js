@@ -2,36 +2,46 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addProduct } from '../../actions';
+import ButtonCta from '../ButtonCta';
+import SizeSelect from '../SizeSelect';
+import ProductDescription from '../ProductDescription';
+
 import './style.scss';
 
-import ButtonCta from '../ButtonCta';
-import ProductDescription from '../ProductDescription';
-import SizeSelect from '../SizeSelect';
-
-const product = {
-  id: '20002605_613',
-  name: 'Produto 1',
-  size: 'PP',
-  price: 20,
-  amount: 1,
-  installments: '3x R$ 66,63',
-};
-
-const ProductInfo = ({ addProduct }) => {
+const ProductInfo = ({ addProduct, layout, produto }) => {
   const [selectedSize, setSelectecSize] = useState('');
 
+  const priceNumber = produto.actual_price.split(' ');
+  
   const handleSizeSelection = (event) => {
     setSelectecSize(event.target.name);
   };
 
+
   return (
     <div className='productInfo'>
-      <ProductDescription {...product} />
+      <ProductDescription
+        layout={layout}
+        name={produto.name}
+        regularPrice={produto.regular_price}
+        actualPrice={produto.actual_price}
+        installments={` em até ${produto.installments}`}
+        onSale={produto.on_sale}
+      />
       <SizeSelect selectedSize={selectedSize} handleSizeSelection={handleSizeSelection} />
       <ButtonCta
         text='Adicionar à sacola de compras'
         layout='filled productInfo__buttonCta'
-        handleClick={() => addProduct({ ...product, size: selectedSize })}
+        isDisabled={selectedSize === ''}
+        handleClick={() =>
+          addProduct({
+            ...produto,
+            id: produto.code_color,
+            size: selectedSize,
+            price: parseFloat(priceNumber[1].replace(',', '.')),
+            amount: 1,
+          })
+        }
       />
     </div>
   );

@@ -1,22 +1,21 @@
 @import 'src/base-styles/dependencies';
 
 .cardProductDefault {
-  
-   @include mq-min(md) {
-      margin: 15px 0px 30px 42px;
-    }
+  @include mq-min(md) {
+    margin: 15px 0px 30px 42px;
+  }
 
-   @include mq-min(xl) {
-      width: 22.64%;
-      margin: 15px 0px 30px 22px;
-      max-height: 412px;
-
+  @include mq-min(xl) {
+    width: 22.64%;
+    margin: 15px 0px 30px 22px;
+    max-height: 412px;
   }
 
   &__inner {
+    text-decoration: none;
+    color: inherit;
     width: 40%;
     margin-bottom: 32px;
-    // position: relative;
 
     @include mq-min(md) {
       width: 26%;
@@ -35,6 +34,5 @@
       max-width: 100%;
       cursor: pointer;
     }
-
   }
 }
