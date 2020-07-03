@@ -1,12 +1,20 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import ProductBox from '../ProductBox';
 import ButtonCta from '../../ButtonCta';
-import { handleKeepBuyingBtn, handlePaymentBtn } from '../../../utils/buttonFunctions';
+import { handlePaymentBtn } from '../../../utils/buttonFunctions';
 
 import './style.scss';
 
 const CartModal = ({ activeCart, setActiveCart, cartAmount, products, totalPrice }) => {
+  const history = useHistory()
+
+  const handleKeepBuyingBtn = () => {
+    history.push('/')
+    setActiveCart(false)
+  };
+
   return (
     <section className='cartModal'>
       <header className='cartModal__header cartModal__container'>

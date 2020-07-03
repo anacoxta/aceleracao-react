@@ -1,9 +1,5 @@
-const handleKeepBuyingBtn = () => {
-  alert('Continue comprando!');
-};
-
 const handlePaymentBtn = () => {
-  alert('Redirecionando para o pagamento!');
+  alert('Compra realizada com sucesso!');
 };
 
-export { handleKeepBuyingBtn, handlePaymentBtn };
+export { handlePaymentBtn };
