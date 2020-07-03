@@ -1,9 +1,9 @@
-import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT } from '../actions';
+import { ADD_PRODUCT, REMOVE_PRODUCT, UPDATE_PRODUCT, RESET_CART } from '../actions';
 
 const initialState = {
   totalPrice: 0,
   totalAmount: 0,
-  products: []
+  products: [],
 };
 
 export const cartReducer = (state = initialState, action) => {
@@ -40,7 +40,9 @@ export const cartReducer = (state = initialState, action) => {
           return product;
         }),
       };
+    case RESET_CART:
+      return initialState;
     default:
       return state;
-  };
+  }
 };

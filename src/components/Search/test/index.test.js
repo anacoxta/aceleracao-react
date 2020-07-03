@@ -1,6 +1,6 @@
 const { normalizeStr } = require('./index-test');
 
-describe('Deve retornar filtro genérico para busca de produtos', () => {
+describe('Deve retornar filtro genérico para busca de products', () => {
   it('Deve retornar uma string normalizada, sem acentuação', () => {
     const normalString = normalizeStr('ÓCULOS');
     expect(normalString).toEqual('OCULOS, entrada com acento normalizada');

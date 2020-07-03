@@ -3,7 +3,7 @@
 .productBox {
   display: flex;
   justify-content: space-between;
-  height: 178px;
+  min-height: 178px;
   border-bottom: 0.125em solid $border-primary;
   padding: 0.912em 0;
 
@@ -24,5 +24,6 @@
     padding: 0;
     background-color: transparent;
     color: $warning;
+    cursor: pointer;
   }
 }
