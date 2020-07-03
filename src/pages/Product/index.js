@@ -9,6 +9,7 @@ import './style.scss';
 import Image from '../../components/Image';
 import ProductInfo from '../../components/ProductInfo';
 import ButtonCta from '../../components/ButtonCta';
+import Loading from '../../components/Loading';
 
 const Product = () => {
   const history = useHistory();
@@ -31,11 +32,13 @@ const Product = () => {
         />
       </div>
       <div className='page__content'>
-        {product && (
+        {product ? (
           <>
             <Image src={product.image} alt={product.name} />
             <ProductInfo product={product} />
           </>
+        ) : (
+          <Loading />
         )}
       </div>
     </div>
