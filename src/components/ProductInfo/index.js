@@ -17,6 +17,7 @@ const ProductInfo = ({ addProduct, layout, product }) => {
     setSelectecSize(event.target.name);
   };
 
+
   return (
     <div className='productInfo'>
       <ProductDescription
@@ -31,10 +32,11 @@ const ProductInfo = ({ addProduct, layout, product }) => {
       <ButtonCta
         text='Adicionar à sacola de compras'
         layout='filled productInfo__buttonCta'
+        isDisabled={selectedSize === ''}
         handleClick={() =>
           addProduct({
-            ...product,
-            id: product.code_color,
+            ...produto,
+            id: produto.code_color,
             size: selectedSize,
             price: parseFloat(priceNumber[1].replace(',', '.')),
             amount: 1,
