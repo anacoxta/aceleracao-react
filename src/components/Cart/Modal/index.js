@@ -52,7 +52,10 @@ const CartModal = ({ activeCart, setActiveCart, cartAmount, products, totalPrice
               <ButtonCta
                 text='Continuar comprando'
                 layout='default'
-                handleClick={() => setActiveCart(!activeCart)}
+                handleClick={() => {
+                  history.push('/');
+                  setActiveCart(false);
+                }}
               />
               <ButtonCta
                 text='Finalizar pagamento'

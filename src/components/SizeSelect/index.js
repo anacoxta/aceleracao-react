@@ -8,16 +8,16 @@ const SizeSelect = ({ selectedSize, handleSizeSelection }) => {
   const [catalog, setCatalog] = useState([]);
 
   useEffect(() => {
-    getCatalog().then(resp => setCatalog(resp.data));
+    getCatalog().then((resp) => setCatalog(resp.data));
   }, []);
-  const produto = catalog.find(produto => produto.code_color === productCode);
+  const product = catalog.find((product) => product.code_color === productCode);
 
   return (
     <section className='sizeSelect'>
       <p className='sizeSelect__title'>Escolha o tamanho</p>
-      {produto && (
+      {product && (
         <div className='sizeSelect__sizeGroup'>
-          {produto.sizes.map((product) => (
+          {product.sizes.map((product) => (
             <button
               key={product.sku}
               name={product.size}
