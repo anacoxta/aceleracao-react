@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { updateProduct, removeProduct } from '../../../actions';
@@ -9,30 +9,28 @@ import ProductDescription from '../../ProductDescription';
 import './style.scss';
 
 const ProductBox = ({ product, updateProduct, removeProduct }) => {
-  const [amount, setAmount] = useState(product.amount);
 
   const handleMinusClick = () => {
-    if (amount - 1 > 0) {
+    if (product.amount - 1 > 0) {
       updateProduct({
         id: product.id,
         amount: -1,
         price: product.price,
       });
-      setAmount(amount - 1);
+
     } else {
       removeProduct({ id: product.id });
     }
   };
 
   const handlePlusClick = () => {
-    if (amount !== 5) {
+    if (product.amount !== 5) {
       updateProduct({
         id: product.id,
         amount: 1,
         price: product.price,
       });
 
-      setAmount(amount + 1);
     }
   };
 
@@ -52,7 +50,7 @@ const ProductBox = ({ product, updateProduct, removeProduct }) => {
           <p className='productBox__size'>Tamanho: {product.size}</p>
         </div>
         <SelectUnit
-          amount={amount}
+          amount={product.amount}
           handleMinusClick={handleMinusClick}
           handlePlusClick={handlePlusClick}
         />
