@@ -9,6 +9,7 @@ import './style.scss';
 import Image from '../../components/Image';
 import ProductInfo from '../../components/ProductInfo';
 import ButtonCta from '../../components/ButtonCta';
+import Loading from '../../components/Loading';
 
 const Product = () => {
   const history = useHistory();
@@ -19,7 +20,7 @@ const Product = () => {
     getCatalog().then((resp) => setCatalog(resp.data));
   }, []);
 
-  const produto = catalog.find((produto) => produto.code_color === productCode);
+  const product = catalog.find((product) => product.code_color === productCode);
 
   return (
     <div className='page'>
@@ -31,11 +32,13 @@ const Product = () => {
         />
       </div>
       <div className='page__content'>
-        {produto && (
+        {product ? (
           <>
-            <Image src={produto.image} alt={produto.name} />
-            <ProductInfo produto={produto} />
+            <Image src={product.image} alt={product.name} />
+            <ProductInfo product={product} />
           </>
+        ) : (
+          <Loading />
         )}
       </div>
     </div>
