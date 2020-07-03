@@ -43,7 +43,12 @@
 
   &__list {
     overflow-y: scroll;
-    height: 65vh;
+    height: 66vh;
+
+    @media (max-width: $xs) {
+      height: 61vh;
+    }
+
     @media (min-width: $md) {
       height: 74vh;
     }
@@ -105,14 +110,6 @@
     color: $primary-light;
   }
 
-  &__removeItemBtn {
-    font-size: 100%;
-    font-family: inherit;
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-    color: $warning;
-  }
 }
 
 .modal {
