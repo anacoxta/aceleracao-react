@@ -1,3 +1,17 @@
+![Badge](https://img.shields.io/static/v1?label=react&message=v16.13.1&color=blue&style=for-the-badge)
+
+![Badge](https://img.shields.io/static/v1?label=axios&message=v0.19.2&color=blue&style=for-the-badge)
+
+![Badge](https://img.shields.io/static/v1?label=node-sass&message=v4.14.1&color=blue&style=for-the-badge)
+
+![Badge](https://img.shields.io/static/v1?label=react-router&message=v5.2.0&color=blue&style=for-the-badge)
+
+![Badge](https://img.shields.io/static/v1?label=redux&message=v7.2.0&color=blue&style=for-the-badge)
+
+![Badge](https://img.shields.io/static/v1?label=redux-persist&message=v6.0.0&color=blue&style=for-the-badge)
+
+![Badge](https://img.shields.io/static/v1?label=jest&message=v4.2.4&color=blue&style=for-the-badge)
+
 <p align="center">
   <img src="./src/assets/logo.png">
 </p>
