@@ -19,7 +19,7 @@ const Product = () => {
     getCatalog().then((resp) => setCatalog(resp.data));
   }, []);
 
-  const produto = catalog.find((produto) => produto.code_color === productCode);
+  const product = catalog.find((product) => product.code_color === productCode);
 
   return (
     <div className='page'>
@@ -31,10 +31,10 @@ const Product = () => {
         />
       </div>
       <div className='page__content'>
-        {produto && (
+        {product && (
           <>
-            <Image src={produto.image} alt={produto.name} />
-            <ProductInfo produto={produto} />
+            <Image src={product.image} alt={product.name} />
+            <ProductInfo product={product} />
           </>
         )}
       </div>
