@@ -18,7 +18,7 @@ const ProductInfo = ({ addProduct, updateProduct, layout, product, products }) =
   };
 
   const handleClickAddProduct = () => {
-    const existedProduct = products.find((product) => product.id === product.code_color);
+    const existedProduct = products.find((item) => item.id === product.code_color);
 
     if (existedProduct) {
       updateProduct({

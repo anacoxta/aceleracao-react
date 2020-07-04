@@ -81,7 +81,7 @@ const CartModal = ({ activeCart, setActiveCart, cartAmount, products, totalPrice
           >
             <i className='fas fa-times-circle'></i>
           </button>
-          <i class='far fa-check-circle'></i>
+          <i className='far fa-check-circle'></i>
           <p>Sua compra foi finalizada com sucesso!</p>
         </div>
       </section>
