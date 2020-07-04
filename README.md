@@ -41,7 +41,7 @@ Para desenvolver a aplicação utilizamos [React](https://github.com/facebook/re
 
 O _layout_ da aplicação foi modelado utilizando a ferramenta [Figma](https://www.figma.com/), e está disponível [neste link](https://www.figma.com/file/OCHbrdXbPId2oQPuhICc9S/Fashionista---Layout?node-id=0%3A1).
 
-O _deploy_ foi feito utilizando o [Netlify](https://www.netlify.com/). O link para a aplicação é [https://react-women.netlify.app/](https://react-women.netlify.app/).
+O _deploy_ foi feito utilizando o [Netlify](https://www.netlify.com/). O link para a aplicação é [https://reactwomen-g3.netlify.app/](https://reactwomen-g3.netlify.app/).
 
 ## Instruções para executar o projeto localmente
 
